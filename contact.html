@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Rosemary Nzembi | Connect for Coaching, Speaking & Collaboration</title>
+    <meta name="description" content="Get in touch with Rosemary Nzembi for life coaching, speaking engagements, media interviews, book collaborations, and partnership opportunities across East Africa.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'african-gold': '#D4AF37',
+                        'earth-brown': '#8B4513',
+                        'warm-terracotta': '#CD853F',
+                        'sage-green': '#9CAF88',
+                        'deep-amber': '#B8860B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            color: #2C2C2C;
+        }
+        
+        .heading-font {
+            font-family: 'Lora', serif;
+        }
+        
+        .inspiration-gradient {
+            background: linear-gradient(135deg, #D4AF37, #B8860B, #CD853F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .elegant-divider {
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            height: 1px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        
+        .mobile-touch {
+            -webkit-tap-highlight-color: rgba(212, 175, 55, 0.3);
+            touch-action: manipulation;
+        }
+        
+        .magazine-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .magazine-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #D4AF37, #B8860B, #CD853F);
+        }
+        
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        
+        .location-pin {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-white font-bold text-lg heading-font hidden">RN</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="heading-font text-xl font-semibold text-gray-900">Rosemary Nzembi</h1>
+                        <p class="text-xs text-gray-500 -mt-1">Inspiring Lives Through Story</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Home</a>
+                    <a href="inspiration.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Inspiration</a>
+                    <a href="about.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">About</a>
+                    <a href="coaching.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Coaching</a>
+                    <a href="podcasts.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Podcasts</a>
+                    <a href="books.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Books</a>
+                    <a href="contact.html" class="text-african-gold font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-african-gold focus:outline-none mobile-touch">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Home</a>
+                <a href="inspiration.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Inspiration</a>
+                <a href="about.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">About</a>
+                <a href="coaching.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Coaching</a>
+                <a href="podcasts.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Podcasts</a>
+                <a href="books.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Books</a>
+                <a href="contact.html" class="block py-3 text-african-gold font-medium mobile-touch">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 lg:py-32 bg-gradient-to-br from-african-gold/5 via-white to-sage-green/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-african-gold/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-african-gold/10 rounded-full px-4 py-2 mb-6">
+                    <span class="text-african-gold font-medium text-sm">Let's Connect</span>
+                </div>
+                <h1 class="heading-font text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                    Start the <span class="inspiration-gradient text-transparent bg-clip-text">Conversation</span>
+                </h1>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Ready to transform your life, book a speaking engagement, or explore collaboration? I'd love to hear from you and discuss how we can work together.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Ways to Connect
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the best way to reach me based on your needs and preferences.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Coaching Inquiries -->
+                <div class="magazine-card contact-card rounded-2xl p-8 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-user-friends text-white text-3xl"></i>
+                    </div>
+                    <h3 class="heading-font text-2xl font-bold text-gray-900 mb-4">Coaching & Personal Development</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Ready to unlock your authentic potential? Schedule a discovery call to explore how we can work together on your transformation journey.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-envelope text-african-gold mr-2"></i>
+                            <span class="text-sm text-gray-600">coaching@rosemarynzembi.com</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock text-african-gold mr-2"></i>
+                            <span class="text-sm text-gray-600">Free 30-min consultation</span>
+                        </div>
+                    </div>
+                    <a href="#contact-form" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                        Book Discovery Call
+                    </a>
+                </div>
+
+                <!-- Speaking & Events -->
+                <div class="magazine-card contact-card rounded-2xl p-8 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-microphone text-white text-3xl"></i>
+                    </div>
+                    <h3 class="heading-font text-2xl font-bold text-gray-900 mb-4">Speaking & Events</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Looking for an inspiring speaker for your event, conference, or organization? Let's discuss how I can add value to your audience.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-envelope text-sage-green mr-2"></i>
+                            <span class="text-sm text-gray-600">speaking@rosemarynzembi.com</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-users text-sage-green mr-2"></i>
+                            <span class="text-sm text-gray-600">50-5000+ audience size</span>
+                        </div>
+                    </div>
+                    <a href="#contact-form" class="bg-sage-green hover:bg-warm-terracotta text-white font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                        Request Speaking Info
+                    </a>
+                </div>
+
+                <!-- Media & Partnerships -->
+                <div class="magazine-card bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-2xl p-8 text-center text-white">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-handshake text-white text-3xl"></i>
+                    </div>
+                    <h3 class="heading-font text-2xl font-bold mb-4">Media & Partnerships</h3>
+                    <p class="text-white/90 leading-relaxed mb-6">
+                        Media interviews, podcast guest appearances, book collaborations, and strategic partnerships with like-minded organizations.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-envelope text-white mr-2"></i>
+                            <span class="text-sm text-white/80">media@rosemarynzembi.com</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock text-white mr-2"></i>
+                            <span class="text-sm text-white/80">48hr response time</span>
+                        </div>
+                    </div>
+                    <a href="#contact-form" class="bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                        Explore Partnership
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Form -->
+    <section id="contact-form" class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-sage-green/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Send Me a Message
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600">
+                    I personally read every message and respond within 48 hours. Let's start the conversation.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+                <form class="space-y-6">
+                    <!-- Personal Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name *</label>
+                            <input type="text" id="first-name" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your first name">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name *</label>
+                            <input type="text" id="last-name" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your last name">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="email" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="+254 700 000 000">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="country" class="block text-gray-700 font-medium mb-2">Country/Region</label>
+                            <select id="country" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                                <option value="">Select your country</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="uganda">Uganda</option>
+                                <option value="tanzania">Tanzania</option>
+                                <option value="rwanda">Rwanda</option>
+                                <option value="ethiopia">Ethiopia</option>
+                                <option value="south-africa">South Africa</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="ghana">Ghana</option>
+                                <option value="other-africa">Other African Country</option>
+                                <option value="usa">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="canada">Canada</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="inquiry-type" class="block text-gray-700 font-medium mb-2">Type of Inquiry *</label>
+                            <select id="inquiry-type" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                                <option value="">Select inquiry type</option>
+                                <option value="coaching">Personal Coaching</option>
+                                <option value="group-coaching">Group Coaching Program</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="workshop">Workshop/Training</option>
+                                <option value="podcast-guest">Podcast Guest Appearance</option>
+                                <option value="media-interview">Media Interview</option>
+                                <option value="book-collaboration">Book/Writing Collaboration</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Organization Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="organization" class="block text-gray-700 font-medium mb-2">Organization/Company</label>
+                            <input type="text" id="organization" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your organization name">
+                        </div>
+                        <div>
+                            <label for="role" class="block text-gray-700 font-medium mb-2">Your Role/Title</label>
+                            <input type="text" id="role" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your job title or role">
+                        </div>
+                    </div>
+
+                    <!-- Event/Project Details (conditional fields) -->
+                    <div id="event-details" class="grid md:grid-cols-2 gap-6 hidden">
+                        <div>
+                            <label for="event-date" class="block text-gray-700 font-medium mb-2">Event/Project Date</label>
+                            <input type="date" id="event-date" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                        </div>
+                        <div>
+                            <label for="audience-size" class="block text-gray-700 font-medium mb-2">Expected Audience Size</label>
+                            <select id="audience-size" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                                <option value="">Select audience size</option>
+                                <option value="1-10">1-10 people</option>
+                                <option value="11-50">11-50 people</option>
+                                <option value="51-100">51-100 people</option>
+                                <option value="101-500">101-500 people</option>
+                                <option value="501-1000">501-1000 people</option>
+                                <option value="1001+">1000+ people</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Budget Range (conditional) -->
+                    <div id="budget-section" class="hidden">
+                        <label for="budget" class="block text-gray-700 font-medium mb-2">Budget Range (Optional)</label>
+                        <select id="budget" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                            <option value="">Prefer not to say</option>
+                            <option value="under-500">Under $500</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="1000-2500">$1,000 - $2,500</option>
+                            <option value="2500-5000">$2,500 - $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="over-10000">Over $10,000</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Your Message *</label>
+                        <textarea id="message" rows="6" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch resize-none" placeholder="Tell me about your goals, your event, or how I can help you. The more details you provide, the better I can understand your needs and respond effectively."></textarea>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-sm text-gray-500">Please be as specific as possible</span>
+                            <span id="char-count" class="text-sm text-gray-400">0/1000</span>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-4">How would you prefer I contact you?</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="contact-preference" value="email" checked class="mr-3 rounded border-gray-300 text-african-gold focus:ring-african-gold">
+                                <span class="text-gray-700">Email (recommended)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="contact-preference" value="phone" class="mr-3 rounded border-gray-300 text-african-gold focus:ring-african-gold">
+                                <span class="text-gray-700">Phone call</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="contact-preference" value="whatsapp" class="mr-3 rounded border-gray-300 text-african-gold focus:ring-african-gold">
+                                <span class="text-gray-700">WhatsApp</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <label class="flex items-start">
+                            <input type="checkbox" name="newsletter" value="yes" class="mr-3 mt-1 rounded border-gray-300 text-african-gold focus:ring-african-gold">
+                            <div>
+                                <span class="text-gray-700 font-medium">Stay connected with my journey</span>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    Receive weekly inspiration, exclusive content, early access to events, and updates about new books and programs. No spam, unsubscribe anytime.
+                                </p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-12 rounded-full text-lg transition-all transform hover:scale-105 mobile-touch">
+                            Send Message
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">
+                            <i class="fas fa-shield-alt text-african-gold mr-1"></i>
+                            Your information is secure and will never be shared with third parties.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Info -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Where to Find Me
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Based in East Africa, serving clients globally through virtual sessions and traveling for speaking engagements.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Primary Location -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-map-marker-alt location-pin text-white text-3xl"></i>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Primary Location</h3>
+                    <p class="text-gray-600 mb-2">Nairobi, Kenya</p>
+                    <p class="text-sm text-gray-500">Available for in-person sessions and local events</p>
+                </div>
+
+                <!-- Virtual Services -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-globe text-white text-3xl"></i>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Global Reach</h3>
+                    <p class="text-gray-600 mb-2">Virtual Coaching & Consulting</p>
+                    <p class="text-sm text-gray-500">Serving clients across Africa and internationally</p>
+                </div>
+
+                <!-- Travel Availability -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-plane text-white text-3xl"></i>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Speaking Travel</h3>
+                    <p class="text-gray-600 mb-2">East Africa & International</p>
+                    <p class="text-sm text-gray-500">Available for conferences, workshops, and events</p>
+                </div>
+            </div>
+
+            <!-- Response Times -->
+            <div class="mt-16 bg-gradient-to-r from-african-gold/5 to-sage-green/5 rounded-2xl p-8">
+                <h3 class="heading-font text-2xl font-bold text-gray-900 text-center mb-8">Response Times</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-african-gold mb-2">24hrs</div>
+                        <div class="text-gray-600">General Inquiries</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-sage-green mb-2">48hrs</div>
+                        <div class="text-gray-600">Coaching Consultations</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-warm-terracotta mb-2">72hrs</div>
+                        <div class="text-gray-600">Speaking Proposals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 lg:py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-african-gold/10 via-transparent to-sage-green/10"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    Frequently Asked <span class="inspiration-gradient text-transparent bg-clip-text">Questions</span>
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Quick answers to common questions about working with me.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h4 class="font-bold text-white mb-3">How quickly can we start working together?</h4>
+                    <p class="text-gray-300">For coaching clients, I typically have availability within 1-2 weeks after our discovery call. Speaking engagements require 2-4 weeks advance notice, though I can accommodate urgent requests when possible.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h4 class="font-bold text-white mb-3">Do you offer virtual coaching sessions?</h4>
+                    <p class="text-gray-300">Yes! The majority of my coaching clients work with me virtually via Zoom. This allows me to serve clients across Africa and internationally. In-person sessions are available for clients in the Nairobi area.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h4 class="font-bold text-white mb-3">What languages do you speak?</h4>
+                    <p class="text-gray-300">I conduct sessions in English and Swahili. I can also incorporate basic Kikuyu for clients who would benefit from connecting with their cultural roots in their native language.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h4 class="font-bold text-white mb-3">Do you travel internationally for speaking engagements?</h4>
+                    <p class="text-gray-300">Absolutely! I regularly speak at conferences and events across East Africa and am available for international engagements. Travel and accommodation costs are included in speaking fees for events outside Kenya.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                    <h4 class="font-bold text-white mb-3">What makes your coaching approach unique?</h4>
+                    <p class="text-gray-300">My approach combines modern coaching methodologies with African wisdom traditions. I help clients honor their cultural heritage while pursuing contemporary goals, creating authentic success that feels true to who they are.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden mr-3">
+                            <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-10 h-10 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="text-white font-bold text-xl heading-font hidden">RN</span>
+                        </div>
+                        <span class="heading-font text-2xl font-bold">Rosemary Nzembi</span>
+                    </div>
+                    <p class="text-gray-300 max-w-md mb-6">
+                        East Africa's leading voice for authentic empowerment. Transforming lives through storytelling, coaching, and inspiration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://youtube.com/@nzembitv?si=lSN46LArChIt2gOF" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-african-gold transition-colors">Home</a></li>
+                        <li><a href="inspiration.html" class="text-gray-300 hover:text-african-gold transition-colors">Inspiration</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-african-gold transition-colors">About</a></li>
+                        <li><a href="coaching.html" class="text-gray-300 hover:text-african-gold transition-colors">Coaching</a></li>
+                        <li><a href="podcasts.html" class="text-gray-300 hover:text-african-gold transition-colors">Podcasts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="books.html" class="text-gray-300 hover:text-african-gold transition-colors">Books</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Free Downloads</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                    © 2025 Rosemary Nzembi - Kandid Xpressions. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Dynamic form fields based on inquiry type
+        const inquiryType = document.getElementById('inquiry-type');
+        const eventDetails = document.getElementById('event-details');
+        const budgetSection = document.getElementById('budget-section');
+
+        inquiryType.addEventListener('change', function() {
+            const value = this.value;
+            
+            // Show/hide event details for event-related inquiries
+            if (['speaking', 'workshop', 'partnership'].includes(value)) {
+                eventDetails.classList.remove('hidden');
+                budgetSection.classList.remove('hidden');
+            } else {
+                eventDetails.classList.add('hidden');
+                if (value !== 'coaching' && value !== 'group-coaching') {
+                    budgetSection.classList.add('hidden');
+                } else if (['coaching', 'group-coaching'].includes(value)) {
+                    budgetSection.classList.remove('hidden');
+                }
+            }
+        });
+
+        // Character counter for message field
+        const messageField = document.getElementById('message');
+        const charCount = document.getElementById('char-count');
+
+        messageField.addEventListener('input', function() {
+            const length = this.value.length;
+            charCount.textContent = `${length}/1000`;
+            
+            if (length > 1000) {
+                charCount.classList.add('text-red-500');
+                this.value = this.value.substring(0, 1000);
+            } else {
+                charCount.classList.remove('text-red-500');
+            }
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = ['first-name', 'last-name', 'email', 'inquiry-type', 'message'];
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const element = document.getElementById(field);
+                if (!element.value.trim()) {
+                    element.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    element.classList.remove('border-red-500');
+                }
+            });
+            
+            // Email validation
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('email').classList.add('border-red-500');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success message
+                alert('Thank you for your message! I will personally review it and respond within 48 hours. Check your email for a confirmation.');
+                
+                // In production, this would submit to a backend service
+                console.log('Form would be submitted to backend service');
+                
+                // Reset form
+                this.reset();
+                eventDetails.classList.add('hidden');
+                budgetSection.classList.add('hidden');
+                charCount.textContent = '0/1000';
+            } else {
+                alert('Please fill in all required fields and provide a valid email address.');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Coaching with Rosemary Nzembi - Transform Your Life Through Authentic Empowerment</title>
+    <meta name="description" content="Transform your life with personalized coaching from Rosemary Nzembi. One-on-one sessions, group programs, workshops, and speaking engagements designed to unlock your authentic potential.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'african-gold': '#D4AF37',
+                        'earth-brown': '#8B4513',
+                        'warm-terracotta': '#CD853F',
+                        'sage-green': '#9CAF88',
+                        'deep-amber': '#B8860B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            color: #2C2C2C;
+        }
+        
+        .heading-font {
+            font-family: 'Lora', serif;
+        }
+        
+        .inspiration-gradient {
+            background: linear-gradient(135deg, #D4AF37, #B8860B, #CD853F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .elegant-divider {
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            height: 1px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        
+        .mobile-touch {
+            -webkit-tap-highlight-color: rgba(212, 175, 55, 0.3);
+            touch-action: manipulation;
+        }
+        
+        .magazine-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .magazine-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .price-card {
+            position: relative;
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+        }
+        
+        .price-card.featured {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-white font-bold text-lg heading-font hidden">RN</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="heading-font text-xl font-semibold text-gray-900">Rosemary Nzembi</h1>
+                        <p class="text-xs text-gray-500 -mt-1">Inspiring Lives Through Story</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Home</a>
+                    <a href="inspiration.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Inspiration</a>
+                    <a href="about.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">About</a>
+                    <a href="coaching.html" class="text-african-gold font-medium">Coaching</a>
+                    <a href="podcasts.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Podcasts</a>
+                    <a href="books.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Books</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-african-gold focus:outline-none mobile-touch">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Home</a>
+                <a href="inspiration.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Inspiration</a>
+                <a href="about.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">About</a>
+                <a href="coaching.html" class="block py-3 text-african-gold font-medium mobile-touch">Coaching</a>
+                <a href="podcasts.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Podcasts</a>
+                <a href="books.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Books</a>
+                <a href="contact.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 lg:py-32 bg-gradient-to-br from-african-gold/5 via-white to-sage-green/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-african-gold/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-african-gold/10 rounded-full px-4 py-2 mb-6">
+                    <span class="text-african-gold font-medium text-sm">Coaching & Services</span>
+                </div>
+                <h1 class="heading-font text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                    <span class="inspiration-gradient text-transparent bg-clip-text">Transform</span> Your Life
+                </h1>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Unlock your authentic potential through personalized coaching designed to help you overcome limiting beliefs and step into your power.
+                </p>
+            </div>
+            
+            <div class="flex justify-center">
+                <a href="#services" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Approach Section -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    My Approach
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Every transformation begins with authentic connection. Here's how we'll work together to unlock your potential.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="text-3xl font-bold text-white heading-font">1</span>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Discovery</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We explore your current situation, challenges, dreams, and goals to create a clear understanding of where you are and where you want to be.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="text-3xl font-bold text-white heading-font">2</span>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Strategy</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Together, we develop a personalized roadmap tailored to your unique needs, incorporating proven methodologies and your authentic style.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="text-3xl font-bold text-white heading-font">3</span>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Action</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We implement your plan with consistent support, guidance, and accountability, making adjustments as you grow and evolve.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-earth-brown to-african-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="text-3xl font-bold text-white heading-font">4</span>
+                    </div>
+                    <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Transform</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        You achieve your goals and develop the skills and confidence to continue growing independently, becoming your own greatest advocate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-sage-green/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    My Services
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the path that resonates with your journey. Each service is designed to meet you where you are and guide you where you want to go.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Personal Coaching -->
+                <div class="magazine-card service-card bg-white rounded-2xl p-8 shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-african-gold to-deep-amber rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-friends text-white text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font text-2xl font-bold text-gray-900 mb-4">Personal Coaching</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        One-on-one sessions designed to help you identify and overcome limiting beliefs while developing actionable strategies for personal and professional growth.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-900 mb-3">What You'll Gain:</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-african-gold mr-2"></i> Clear vision and purpose</li>
+                            <li class="flex items-center"><i class="fas fa-check text-african-gold mr-2"></i> Confidence and self-awareness</li>
+                            <li class="flex items-center"><i class="fas fa-check text-african-gold mr-2"></i> Practical action plans</li>
+                            <li class="flex items-center"><i class="fas fa-check text-african-gold mr-2"></i> Ongoing accountability and support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-t border-gray-100 pt-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Starting at</p>
+                                <p class="text-2xl font-bold text-african-gold">$150<span class="text-base text-gray-500">/session</span></p>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <p>90-minute sessions</p>
+                                <p>Virtual or in-person</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-african-gold hover:bg-deep-amber text-white font-semibold py-3 px-6 rounded-full transition-colors text-center block mobile-touch">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Speaking Engagements -->
+                <div class="magazine-card service-card bg-white rounded-2xl p-8 shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-microphone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font text-2xl font-bold text-gray-900 mb-4">Speaking Engagements</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Inspiring keynote speeches, workshops, and presentations tailored to your audience's needs, focusing on empowerment, authenticity, and transformation.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-900 mb-3">Popular Topics:</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-sage-green mr-2"></i> Authentic Leadership</li>
+                            <li class="flex items-center"><i class="fas fa-check text-sage-green mr-2"></i> Overcoming Limiting Beliefs</li>
+                            <li class="flex items-center"><i class="fas fa-check text-sage-green mr-2"></i> Cross-Cultural Communication</li>
+                            <li class="flex items-center"><i class="fas fa-check text-sage-green mr-2"></i> Women's Empowerment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-t border-gray-100 pt-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Customized pricing</p>
+                                <p class="text-lg font-bold text-sage-green">Contact for quote</p>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <p>30-90 minutes</p>
+                                <p>50-5000 people</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-sage-green hover:bg-warm-terracotta text-white font-semibold py-3 px-6 rounded-full transition-colors text-center block mobile-touch">
+                            Book Speaking
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group Programs -->
+                <div class="magazine-card service-card bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-2xl p-8 shadow-xl transition-all duration-300 text-white">
+                    <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font text-2xl font-bold mb-4">Group Programs</h3>
+                    <p class="text-white/90 mb-6 leading-relaxed">
+                        Small group coaching programs that combine personal development with peer support, creating a powerful environment for growth and accountability.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-white mb-3">Program Highlights:</h4>
+                        <ul class="space-y-2 text-sm text-white/80">
+                            <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> Peer learning and support</li>
+                            <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> Structured 12-week curriculum</li>
+                            <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> Weekly group calls</li>
+                            <li class="flex items-center"><i class="fas fa-check text-white mr-2"></i> Private community access</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-t border-white/20 pt-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <p class="text-sm text-white/70">Starting at</p>
+                                <p class="text-2xl font-bold text-white">$97<span class="text-base text-white/70">/month</span></p>
+                            </div>
+                            <div class="text-sm text-white/70">
+                                <p>6-12 participants</p>
+                                <p>12-week programs</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 rounded-full transition-colors text-center block mobile-touch">
+                            Join Program
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Workshops -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-african-gold to-deep-amber rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-chalkboard-teacher text-white"></i>
+                        </div>
+                        <h4 class="heading-font text-lg font-bold text-gray-900">Interactive Workshops</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Half-day to 3-day programs for teams and organizations focusing on communication, leadership, and personal development.</p>
+                    <a href="#contact" class="text-african-gold hover:text-deep-amber font-semibold text-sm">Learn More →</a>
+                </div>
+
+                <!-- Podcast Consulting -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-podcast text-white"></i>
+                        </div>
+                        <h4 class="heading-font text-lg font-bold text-gray-900">Podcast Consulting</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Strategic guidance on content creation, audience building, and monetization for your podcast journey.</p>
+                    <a href="#contact" class="text-sage-green hover:text-warm-terracotta font-semibold text-sm">Learn More →</a>
+                </div>
+
+                <!-- Writing & Content -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-pen-fancy text-white"></i>
+                        </div>
+                        <h4 class="heading-font text-lg font-bold text-gray-900">Content Creation</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Professional writing services for blogs, social media, newsletters, and personal brand content that resonates.</p>
+                    <a href="#contact" class="text-warm-terracotta hover:text-earth-brown font-semibold text-sm">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Client Success Stories
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how coaching has transformed the lives of entrepreneurs, leaders, and individuals across East Africa and beyond.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="magazine-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b494?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                             alt="Jane Mukiri" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Jane Mukiri</h4>
+                            <p class="text-sm text-gray-500">Entrepreneur, Nairobi</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6 leading-relaxed italic">
+                        "Rosemary helped me transform from a struggling single mother into a confident entrepreneur. Her coaching gave me the tools and confidence to build a successful catering business."
+                    </blockquote>
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-african-gold text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Personal Coaching</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="magazine-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                             alt="David Kimani" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">David Kimani</h4>
+                            <p class="text-sm text-gray-500">Executive, Mombasa</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6 leading-relaxed italic">
+                        "Working with Rosemary revolutionized my leadership style. Her insights on authentic communication transformed how I connect with my team and deliver results."
+                    </blockquote>
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-african-gold text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Executive Coaching</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="magazine-card bg-gradient-to-br from-african-gold to-deep-amber rounded-xl p-8 shadow-lg text-white">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold text-lg">SW</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Wanjiku</h4>
+                            <p class="text-sm opacity-80">Speaker, Kisumu</p>
+                        </div>
+                    </div>
+                    <blockquote class="mb-6 leading-relaxed italic opacity-95">
+                        "Rosemary's speaking workshop gave me the confidence to share my story on international stages. I now speak with authentic power and connect deeply with my audiences."
+                    </blockquote>
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-white text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs bg-white/20 px-2 py-1 rounded">Workshop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="contact" class="py-16 lg:py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-african-gold/10 via-transparent to-sage-green/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    Ready to <span class="inspiration-gradient text-transparent bg-clip-text">Transform</span> Your Life?
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Schedule a free 30-minute discovery call to explore how we can work together to unlock your authentic potential.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Benefits -->
+                <div>
+                    <h3 class="heading-font text-2xl font-bold mb-8">What You Get in Our Discovery Call:</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-african-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-2">Clarity on Your Vision</h4>
+                                <p class="text-gray-300">We'll explore your goals, challenges, and what success looks like for you.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-african-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-2">Personalized Strategy</h4>
+                                <p class="text-gray-300">Receive customized recommendations tailored to your unique situation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-african-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-2">Perfect Match Assessment</h4>
+                                <p class="text-gray-300">We'll determine if we're a good fit to work together on your transformation journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-white font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch" placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-white font-medium mb-2">Service Interest</label>
+                            <select id="service" class="w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch">
+                                <option value="" class="text-gray-900">Select a service</option>
+                                <option value="personal-coaching" class="text-gray-900">Personal Coaching</option>
+                                <option value="speaking" class="text-gray-900">Speaking Engagement</option>
+                                <option value="group-program" class="text-gray-900">Group Program</option>
+                                <option value="workshop" class="text-gray-900">Workshop</option>
+                                <option value="other" class="text-gray-900">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-white font-medium mb-2">Tell Me About Your Goals</label>
+                            <textarea id="message" rows="4" class="w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch" placeholder="What would you like to achieve through coaching?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-105 mobile-touch">
+                            Schedule My Discovery Call
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden mr-3">
+                            <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-10 h-10 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="text-white font-bold text-xl heading-font hidden">RN</span>
+                        </div>
+                        <span class="heading-font text-2xl font-bold">Rosemary Nzembi</span>
+                    </div>
+                    <p class="text-gray-300 max-w-md mb-6">
+                        East Africa's leading voice for authentic empowerment. Transforming lives through storytelling, coaching, and inspiration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://youtube.com/@nzembitv?si=lSN46LArChIt2gOF" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://web.facebook.com/aspire2inspire?_rdc=1&_rdr" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rosemary-nzembi-cpc-aasc-kandid-xpressions-8524145" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rosemary_nzembi/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/254722689014" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-african-gold transition-colors">Home</a></li>
+                        <li><a href="inspiration.html" class="text-gray-300 hover:text-african-gold transition-colors">Inspiration</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-african-gold transition-colors">About</a></li>
+                        <li><a href="podcasts.html" class="text-gray-300 hover:text-african-gold transition-colors">Podcasts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="books.html" class="text-gray-300 hover:text-african-gold transition-colors">Books</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Free Downloads</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-african-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                    © 2025 Rosemary Nzembi - Kandid Xpressions. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            if (name && email && email.includes('@')) {
+                alert('Thank you for your interest! I will contact you within 24 hours to schedule your discovery call.');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields with valid information.');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

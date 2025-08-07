@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandid Xpressions Podcast - Rosemary Nzembi | Authentic Conversations About Life & Growth</title>
+    <meta name="description" content="Join Rosemary Nzembi on Kandid Xpressions podcast for authentic conversations about personal growth, African culture, entrepreneurship, and life transformation stories.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'african-gold': '#D4AF37',
+                        'earth-brown': '#8B4513',
+                        'warm-terracotta': '#CD853F',
+                        'sage-green': '#9CAF88',
+                        'deep-amber': '#B8860B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            color: #2C2C2C;
+        }
+        
+        .heading-font {
+            font-family: 'Lora', serif;
+        }
+        
+        .inspiration-gradient {
+            background: linear-gradient(135deg, #D4AF37, #B8860B, #CD853F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .elegant-divider {
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            height: 1px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        
+        .mobile-touch {
+            -webkit-tap-highlight-color: rgba(212, 175, 55, 0.3);
+            touch-action: manipulation;
+        }
+        
+        .magazine-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .magazine-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .podcast-card {
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .podcast-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #D4AF37, #B8860B, #CD853F);
+        }
+        
+        .play-button {
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+        }
+        
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px -5px rgba(212, 175, 55, 0.6);
+        }
+        
+        .episode-card:hover .play-button {
+            transform: scale(1.05);
+        }
+        
+        .waveform {
+            background: linear-gradient(45deg, #D4AF37, #B8860B, #CD853F, #9CAF88);
+            background-size: 400% 400%;
+            animation: waveflow 8s ease-in-out infinite;
+        }
+        
+        @keyframes waveflow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-white font-bold text-lg heading-font hidden">RN</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="heading-font text-xl font-semibold text-gray-900">Rosemary Nzembi</h1>
+                        <p class="text-xs text-gray-500 -mt-1">Inspiring Lives Through Story</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Home</a>
+                    <a href="inspiration.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Inspiration</a>
+                    <a href="about.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">About</a>
+                    <a href="coaching.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Coaching</a>
+                    <a href="podcasts.html" class="text-african-gold font-medium">Podcasts</a>
+                    <a href="books.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Books</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-african-gold focus:outline-none mobile-touch">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Home</a>
+                <a href="inspiration.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Inspiration</a>
+                <a href="about.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">About</a>
+                <a href="coaching.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Coaching</a>
+                <a href="podcasts.html" class="block py-3 text-african-gold font-medium mobile-touch">Podcasts</a>
+                <a href="books.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Books</a>
+                <a href="contact.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 lg:py-32 bg-gradient-to-br from-african-gold/5 via-white to-sage-green/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-african-gold/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="text-center lg:text-left mb-12 lg:mb-0">
+                    <div class="inline-block bg-african-gold/10 rounded-full px-4 py-2 mb-6">
+                        <span class="text-african-gold font-medium text-sm">Kandid Xpressions Podcast</span>
+                    </div>
+                    <h1 class="heading-font text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                        Authentic <span class="inspiration-gradient text-transparent bg-clip-text">Conversations</span>
+                    </h1>
+                    <div class="elegant-divider mb-8 lg:mx-0"></div>
+                    <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
+                        Join me for candid conversations about personal growth, African culture, entrepreneurship, and the stories that shape our lives.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <a href="https://youtube.com/@nzembitv?si=lSN46LArChIt2gOF" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                            <i class="fab fa-youtube mr-2"></i>Watch on YouTube
+                        </a>
+                        <button class="bg-white hover:bg-gray-50 text-gray-900 font-semibold py-4 px-8 rounded-full border border-gray-200 transition-all mobile-touch">
+                            <i class="fas fa-podcast mr-2"></i>All Episodes
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center lg:justify-start space-x-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-african-gold">50+</div>
+                            <div class="text-sm text-gray-600">Episodes</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-african-gold">10K+</div>
+                            <div class="text-sm text-gray-600">Listeners</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-african-gold">25+</div>
+                            <div class="text-sm text-gray-600">Countries</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-african-gold/10 to-sage-green/10 rounded-3xl p-8 shadow-xl">
+                        <div class="aspect-square bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-center items-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden mb-6 shadow-lg">
+                                <img src="logo.png" alt="Kandid Xpressions" class="w-20 h-20 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <span class="text-white font-bold text-3xl heading-font hidden">KX</span>
+                            </div>
+                            <h3 class="heading-font text-2xl font-bold text-gray-900 mb-2">Kandid Xpressions</h3>
+                            <p class="text-gray-600 text-center mb-6">Real conversations. Real growth. Real impact.</p>
+                            <div class="waveform h-2 w-32 rounded-full mb-4"></div>
+                            <p class="text-sm text-gray-500">New episodes every Tuesday</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Episode -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Latest Episode
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="podcast-card rounded-2xl shadow-xl overflow-hidden">
+                    <div class="lg:grid lg:grid-cols-2">
+                        <div class="aspect-video lg:aspect-square">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Latest Episode" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-african-gold/10 text-african-gold px-3 py-1 rounded-full text-xs font-semibold mr-3">Episode 52</span>
+                                <span class="text-gray-500 text-sm">January 15, 2025</span>
+                            </div>
+                            <h3 class="heading-font text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                                Breaking Generational Patterns: A Conversation with Dr. Wanjiku
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Join me as I sit down with renowned psychologist Dr. Wanjiku to discuss how we can identify and break harmful generational patterns while honoring our cultural heritage.
+                            </p>
+                            
+                            <div class="flex items-center mb-6">
+                                <button class="play-button w-16 h-16 rounded-full flex items-center justify-center text-white mr-4 transition-all mobile-touch">
+                                    <i class="fas fa-play text-xl ml-1"></i>
+                                </button>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm font-medium text-gray-900">45:32</span>
+                                        <span class="text-sm text-gray-500">1,247 plays</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-african-gold h-2 rounded-full" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Psychology</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">African Culture</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Personal Growth</span>
+                            </div>
+
+                            <div class="flex space-x-4">
+                                <button class="text-african-gold hover:text-deep-amber transition-colors mobile-touch">
+                                    <i class="fas fa-share-alt mr-2"></i>Share
+                                </button>
+                                <button class="text-african-gold hover:text-deep-amber transition-colors mobile-touch">
+                                    <i class="fas fa-bookmark mr-2"></i>Save
+                                </button>
+                                <button class="text-african-gold hover:text-deep-amber transition-colors mobile-touch">
+                                    <i class="fas fa-download mr-2"></i>Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Episodes -->
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-sage-green/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Recent Episodes
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Dive into our library of transformative conversations with entrepreneurs, thought leaders, and everyday heroes changing lives.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Episode 1 -->
+                <div class="magazine-card episode-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex">
+                        <div class="w-32 h-32 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                 alt="Episode 51" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-sage-green/10 text-sage-green px-2 py-1 rounded text-xs font-semibold mr-2">Episode 51</span>
+                                    <span class="text-gray-500 text-xs">Jan 8, 2025</span>
+                                </div>
+                                <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">
+                                    From Village to Boardroom: Mary's Entrepreneurial Journey
+                                </h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                    Mary Kiprotich shares how she built a tech startup from her rural village in Kenya, overcoming cultural barriers and gender bias.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <button class="play-button w-8 h-8 rounded-full flex items-center justify-center text-white mr-3 transition-all mobile-touch">
+                                        <i class="fas fa-play text-xs ml-0.5"></i>
+                                    </button>
+                                    <span class="text-sm text-gray-500">38:45</span>
+                                </div>
+                                <span class="text-xs text-sage-green">Entrepreneurship</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="magazine-card episode-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex">
+                        <div class="w-32 h-32 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b494?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                 alt="Episode 50" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-warm-terracotta/10 text-warm-terracotta px-2 py-1 rounded text-xs font-semibold mr-2">Episode 50</span>
+                                    <span class="text-gray-500 text-xs">Jan 1, 2025</span>
+                                </div>
+                                <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">
+                                    Healing Through Storytelling: A Therapist's Perspective
+                                </h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                    Licensed therapist Grace Muthoni discusses the power of narrative therapy and cultural healing practices in East Africa.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <button class="play-button w-8 h-8 rounded-full flex items-center justify-center text-white mr-3 transition-all mobile-touch">
+                                        <i class="fas fa-play text-xs ml-0.5"></i>
+                                    </button>
+                                    <span class="text-sm text-gray-500">42:18</span>
+                                </div>
+                                <span class="text-xs text-warm-terracotta">Mental Health</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="magazine-card episode-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex">
+                        <div class="w-32 h-32 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                 alt="Episode 49" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-earth-brown/10 text-earth-brown px-2 py-1 rounded text-xs font-semibold mr-2">Episode 49</span>
+                                    <span class="text-gray-500 text-xs">Dec 25, 2024</span>
+                                </div>
+                                <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">
+                                    Preserving Culture in Modern Times
+                                </h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                    Cultural anthropologist Prof. Kamau explores how African communities can maintain traditions while embracing progress.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <button class="play-button w-8 h-8 rounded-full flex items-center justify-center text-white mr-3 transition-all mobile-touch">
+                                        <i class="fas fa-play text-xs ml-0.5"></i>
+                                    </button>
+                                    <span class="text-sm text-gray-500">51:03</span>
+                                </div>
+                                <span class="text-xs text-earth-brown">Culture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="magazine-card episode-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex">
+                        <div class="w-32 h-32 flex-shrink-0">
+                            <div class="w-full h-full bg-gradient-to-br from-african-gold to-deep-amber flex items-center justify-center">
+                                <i class="fas fa-microphone text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-african-gold/10 text-african-gold px-2 py-1 rounded text-xs font-semibold mr-2">Episode 48</span>
+                                    <span class="text-gray-500 text-xs">Dec 18, 2024</span>
+                                </div>
+                                <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">
+                                    Solo Episode: My 2024 Lessons and 2025 Vision
+                                </h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                    I share my personal reflections on growth, challenges overcome, and the vision that guides me into the new year.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <button class="play-button w-8 h-8 rounded-full flex items-center justify-center text-white mr-3 transition-all mobile-touch">
+                                        <i class="fas fa-play text-xs ml-0.5"></i>
+                                    </button>
+                                    <span class="text-sm text-gray-500">29:37</span>
+                                </div>
+                                <span class="text-xs text-african-gold">Personal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                    View All Episodes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Topics -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Popular Topics
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore conversations organized by themes that matter most to our community.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Topic 1 -->
+                <div class="bg-gradient-to-br from-african-gold/5 to-african-gold/10 rounded-xl p-6 text-center hover:from-african-gold/10 hover:to-african-gold/20 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">Entrepreneurship</h4>
+                    <p class="text-gray-600 text-sm mb-4">Business stories, startup journeys, and lessons from African entrepreneurs.</p>
+                    <span class="text-african-gold font-semibold text-sm">12 Episodes →</span>
+                </div>
+
+                <!-- Topic 2 -->
+                <div class="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-xl p-6 text-center hover:from-sage-green/10 hover:to-sage-green/20 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">Personal Growth</h4>
+                    <p class="text-gray-600 text-sm mb-4">Self-development, mindset shifts, and authentic transformation stories.</p>
+                    <span class="text-sage-green font-semibold text-sm">18 Episodes →</span>
+                </div>
+
+                <!-- Topic 3 -->
+                <div class="bg-gradient-to-br from-warm-terracotta/5 to-warm-terracotta/10 rounded-xl p-6 text-center hover:from-warm-terracotta/10 hover:to-warm-terracotta/20 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-globe-africa text-white text-2xl"></i>
+                    </div>
+                    <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">African Culture</h4>
+                    <p class="text-gray-600 text-sm mb-4">Heritage, traditions, and modern African identity conversations.</p>
+                    <span class="text-warm-terracotta font-semibold text-sm">8 Episodes →</span>
+                </div>
+
+                <!-- Topic 4 -->
+                <div class="bg-gradient-to-br from-earth-brown/5 to-earth-brown/10 rounded-xl p-6 text-center hover:from-earth-brown/10 hover:to-earth-brown/20 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-earth-brown to-african-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">Mental Health</h4>
+                    <p class="text-gray-600 text-sm mb-4">Wellness, therapy, healing, and mental health awareness discussions.</p>
+                    <span class="text-earth-brown font-semibold text-sm">6 Episodes →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="py-16 lg:py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-african-gold/10 via-transparent to-sage-green/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    Never Miss an <span class="inspiration-gradient text-transparent bg-clip-text">Episode</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Subscribe to Kandid Xpressions and join our growing community of listeners committed to authentic growth and meaningful conversations.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="heading-font text-2xl font-bold mb-6">Available On:</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="https://youtube.com/@nzembitv?si=lSN46LArChIt2gOF" class="flex items-center bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all mobile-touch">
+                            <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-youtube text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">YouTube</div>
+                                <div class="text-sm text-gray-400">Watch & Listen</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all mobile-touch">
+                            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-spotify text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Spotify</div>
+                                <div class="text-sm text-gray-400">Coming Soon</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all mobile-touch">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-apple text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Apple Podcasts</div>
+                                <div class="text-sm text-gray-400">Coming Soon</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all mobile-touch">
+                            <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-google text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Google Podcasts</div>
+                                <div class="text-sm text-gray-400">Coming Soon</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                    <h3 class="heading-font text-2xl font-bold mb-6">Get Episode Updates</h3>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Your email address" class="w-full bg-white/10 border border-white/20 rounded-lg py-4 px-6 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="newsletter" class="mr-3 rounded border-white/20 focus:ring-african-gold">
+                            <label for="newsletter" class="text-sm text-gray-300">Also send me weekly inspiration and coaching tips</label>
+                        </div>
+                        <button type="submit" class="w-full bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-105 mobile-touch">
+                            Subscribe to Updates
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden mr-3">
+                            <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-10 h-10 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="text-white font-bold text-xl heading-font hidden">RN</span>
+                        </div>
+                        <span class="heading-font text-2xl font-bold">Rosemary Nzembi</span>
+                    </div>
+                    <p class="text-gray-300 max-w-md mb-6">
+                        East Africa's leading voice for authentic empowerment. Transforming lives through storytelling, coaching, and inspiration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://youtube.com/@nzembitv?si=lSN46LArChIt2gOF" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://web.facebook.com/aspire2inspire?_rdc=1&_rdr" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rosemary-nzembi-cpc-aasc-kandid-xpressions-8524145" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rosemary_nzembi/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/254722689014" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-african-gold transition-colors">Home</a></li>
+                        <li><a href="inspiration.html" class="text-gray-300 hover:text-african-gold transition-colors">Inspiration</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-african-gold transition-colors">About</a></li>
+                        <li><a href="coaching.html" class="text-gray-300 hover:text-african-gold transition-colors">Coaching</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="books.html" class="text-gray-300 hover:text-african-gold transition-colors">Books</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Free Downloads</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-african-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                    © 2025 Rosemary Nzembi - Kandid Xpressions. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Podcast player functionality (simplified)
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const isPlaying = this.classList.contains('playing');
+                
+                // Reset all play buttons
+                document.querySelectorAll('.play-button').forEach(btn => {
+                    btn.classList.remove('playing');
+                    btn.innerHTML = '<i class="fas fa-play text-xl ml-1"></i>';
+                });
+                
+                if (!isPlaying) {
+                    this.classList.add('playing');
+                    this.innerHTML = '<i class="fas fa-pause text-xl"></i>';
+                    // In a real app, this would start audio playback
+                    alert('Audio playback would start here. This is a demo.');
+                }
+            });
+        });
+
+        // Newsletter signup
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing! You\'ll receive episode updates and exclusive content.');
+                this.reset();
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        // Share functionality
+        document.querySelectorAll('[class*="fa-share"]').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Sharing functionality would integrate with social media APIs in production.');
+            });
+        });
+    </script>
+</body>
+</html>

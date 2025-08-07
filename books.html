@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books by Rosemary Nzembi | Transformational Literature from East Africa</title>
+    <meta name="description" content="Discover inspiring books by Rosemary Nzembi. From memoirs to self-help guides, explore transformational literature that combines African wisdom with practical life insights.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'african-gold': '#D4AF37',
+                        'earth-brown': '#8B4513',
+                        'warm-terracotta': '#CD853F',
+                        'sage-green': '#9CAF88',
+                        'deep-amber': '#B8860B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            color: #2C2C2C;
+        }
+        
+        .heading-font {
+            font-family: 'Lora', serif;
+        }
+        
+        .inspiration-gradient {
+            background: linear-gradient(135deg, #D4AF37, #B8860B, #CD853F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .elegant-divider {
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            height: 1px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        
+        .mobile-touch {
+            -webkit-tap-highlight-color: rgba(212, 175, 55, 0.3);
+            touch-action: manipulation;
+        }
+        
+        .magazine-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .magazine-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .book-card {
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .book-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #D4AF37, #B8860B, #CD853F);
+        }
+        
+        .book-spine {
+            background: linear-gradient(135deg, #8B4513, #CD853F);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        
+        .featured-book {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            color: white;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(156, 175, 136, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-white font-bold text-lg heading-font hidden">RN</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="heading-font text-xl font-semibold text-gray-900">Rosemary Nzembi</h1>
+                        <p class="text-xs text-gray-500 -mt-1">Inspiring Lives Through Story</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Home</a>
+                    <a href="inspiration.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Inspiration</a>
+                    <a href="about.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">About</a>
+                    <a href="coaching.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Coaching</a>
+                    <a href="podcasts.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Podcasts</a>
+                    <a href="books.html" class="text-african-gold font-medium">Books</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-african-gold focus:outline-none mobile-touch">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Home</a>
+                <a href="inspiration.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Inspiration</a>
+                <a href="about.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">About</a>
+                <a href="coaching.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Coaching</a>
+                <a href="podcasts.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Podcasts</a>
+                <a href="books.html" class="block py-3 text-african-gold font-medium mobile-touch">Books</a>
+                <a href="contact.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 lg:py-32 bg-gradient-to-br from-african-gold/5 via-white to-sage-green/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-african-gold/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-african-gold/10 rounded-full px-4 py-2 mb-6">
+                    <span class="text-african-gold font-medium text-sm">Literary Collection</span>
+                </div>
+                <h1 class="heading-font text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                    Stories That <span class="inspiration-gradient text-transparent bg-clip-text">Transform</span>
+                </h1>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Explore my collection of transformational books that blend authentic African wisdom with practical insights for modern living and personal growth.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Book -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Latest Release
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="featured-book rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="lg:grid lg:grid-cols-2">
+                        <div class="relative p-12 lg:p-16 flex items-center justify-center bg-gradient-to-br from-african-gold to-deep-amber">
+                            <div class="text-center text-white">
+                                <div class="w-48 h-64 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-xl">
+                                    <div class="text-center">
+                                        <i class="fas fa-book-open text-6xl mb-4"></i>
+                                        <div class="heading-font text-2xl font-bold">RISING</div>
+                                        <div class="text-sm font-medium">FROM ROOTS</div>
+                                        <div class="text-xs mt-2 opacity-80">ROSEMARY NZEMBI</div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center space-x-4 mb-4">
+                                    <div class="flex text-yellow-300 text-lg">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-white/90 text-sm">4.9/5 (127 reviews)</span>
+                                </div>
+                                <p class="text-white/90 text-center">Available in paperback, hardcover, and digital formats</p>
+                            </div>
+                        </div>
+                        <div class="p-12 lg:p-16 bg-white">
+                            <div class="flex items-center mb-6">
+                                <span class="bg-african-gold/10 text-african-gold px-3 py-1 rounded-full text-sm font-semibold mr-3">New Release</span>
+                                <span class="text-gray-500 text-sm">Published December 2024</span>
+                            </div>
+                            <h3 class="heading-font text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                                Rising From Roots: A Journey of Authentic African Womanhood
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                                In this powerful memoir and guide, I share my journey from a small Kenyan village to becoming a voice for authentic empowerment across East Africa. Discover how embracing your cultural roots can become your greatest strength in achieving modern success.
+                            </p>
+                            
+                            <div class="mb-8">
+                                <h4 class="font-bold text-gray-900 mb-4">What You'll Discover:</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-african-gold mr-3 mt-1"></i>
+                                        <span class="text-gray-600">How to honor your heritage while pursuing modern dreams</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-african-gold mr-3 mt-1"></i>
+                                        <span class="text-gray-600">Practical strategies for overcoming limiting cultural beliefs</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-african-gold mr-3 mt-1"></i>
+                                        <span class="text-gray-600">The power of storytelling in personal transformation</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-african-gold mr-3 mt-1"></i>
+                                        <span class="text-gray-600">Building authentic confidence in a globalized world</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 text-center mobile-touch">
+                                    <i class="fas fa-shopping-cart mr-2"></i>Order Now - $24.99
+                                </a>
+                                <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-4 px-8 rounded-full transition-all text-center mobile-touch">
+                                    <i class="fas fa-download mr-2"></i>Free Sample
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Collection -->
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-sage-green/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    Complete Collection
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore my full range of transformational literature, from personal memoirs to practical guides for authentic living.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Book 1 - Published -->
+                <div class="magazine-card book-card rounded-2xl shadow-lg overflow-hidden bg-white">
+                    <div class="p-8">
+                        <div class="flex items-start mb-6">
+                            <div class="book-spine w-4 h-48 rounded mr-4 flex items-center justify-center text-white text-xs font-bold">
+                                VOICES
+                            </div>
+                            <div class="flex-1">
+                                <div class="w-full h-48 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-lg flex items-center justify-center text-white shadow-lg">
+                                    <div class="text-center">
+                                        <i class="fas fa-microphone text-4xl mb-3"></i>
+                                        <div class="heading-font text-xl font-bold">VOICES OF</div>
+                                        <div class="heading-font text-xl font-bold">STRENGTH</div>
+                                        <div class="text-xs mt-2 opacity-80">ROSEMARY NZEMBI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <span class="bg-sage-green/10 text-sage-green px-3 py-1 rounded-full text-xs font-semibold mr-3">Published</span>
+                            <span class="text-gray-500 text-sm">March 2024</span>
+                        </div>
+                        
+                        <h4 class="heading-font text-xl font-bold text-gray-900 mb-3">
+                            Voices of Strength: Stories from African Women Leaders
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            A powerful collection of interviews and stories from 25 remarkable African women leaders sharing their journeys, challenges, and wisdom for the next generation.
+                        </p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-sage-green text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">4.8/5 (89 reviews)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-sage-green">$22.99</span>
+                            <a href="#" class="bg-sage-green hover:bg-warm-terracotta text-white font-semibold py-2 px-6 rounded-full text-sm transition-colors mobile-touch">
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 2 - Published -->
+                <div class="magazine-card book-card rounded-2xl shadow-lg overflow-hidden bg-white">
+                    <div class="p-8">
+                        <div class="flex items-start mb-6">
+                            <div class="book-spine w-4 h-48 rounded mr-4 flex items-center justify-center text-white text-xs font-bold">
+                                PURPOSE
+                            </div>
+                            <div class="flex-1">
+                                <div class="w-full h-48 bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-lg flex items-center justify-center text-white shadow-lg">
+                                    <div class="text-center">
+                                        <i class="fas fa-compass text-4xl mb-3"></i>
+                                        <div class="heading-font text-xl font-bold">FINDING</div>
+                                        <div class="heading-font text-xl font-bold">PURPOSE</div>
+                                        <div class="text-xs mt-2 opacity-80">ROSEMARY NZEMBI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <span class="bg-warm-terracotta/10 text-warm-terracotta px-3 py-1 rounded-full text-xs font-semibold mr-3">Published</span>
+                            <span class="text-gray-500 text-sm">August 2023</span>
+                        </div>
+                        
+                        <h4 class="heading-font text-xl font-bold text-gray-900 mb-3">
+                            Finding Purpose in the African Context
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            A practical guide to discovering and living your purpose while navigating the unique challenges and opportunities of modern African life.
+                        </p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-warm-terracotta text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">4.6/5 (156 reviews)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-warm-terracotta">$19.99</span>
+                            <a href="#" class="bg-warm-terracotta hover:bg-earth-brown text-white font-semibold py-2 px-6 rounded-full text-sm transition-colors mobile-touch">
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 3 - Coming Soon -->
+                <div class="magazine-card book-card rounded-2xl shadow-lg overflow-hidden bg-white opacity-90">
+                    <div class="p-8">
+                        <div class="flex items-start mb-6">
+                            <div class="book-spine w-4 h-48 rounded mr-4 flex items-center justify-center text-white text-xs font-bold bg-gray-400">
+                                LEGACY
+                            </div>
+                            <div class="flex-1">
+                                <div class="w-full h-48 bg-gradient-to-br from-gray-400 to-gray-500 rounded-lg flex items-center justify-center text-white shadow-lg">
+                                    <div class="text-center">
+                                        <i class="fas fa-clock text-4xl mb-3"></i>
+                                        <div class="heading-font text-xl font-bold">BUILDING</div>
+                                        <div class="heading-font text-xl font-bold">LEGACY</div>
+                                        <div class="text-xs mt-2 opacity-80">ROSEMARY NZEMBI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-semibold mr-3">Coming Soon</span>
+                            <span class="text-gray-500 text-sm">Spring 2025</span>
+                        </div>
+                        
+                        <h4 class="heading-font text-xl font-bold text-gray-900 mb-3">
+                            Building a Legacy: Wisdom for Future Generations
+                        </h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Explore how to create meaningful impact and leave a lasting legacy that honors your African heritage while contributing to global progress.
+                        </p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm text-gray-400">Pre-orders available soon</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-gray-400">TBD</span>
+                            <button class="bg-gray-300 text-gray-600 font-semibold py-2 px-6 rounded-full text-sm cursor-not-allowed">
+                                Notify Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Formats -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h3 class="heading-font text-2xl font-bold text-gray-900 text-center mb-8">Available Formats</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-book text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Paperback</h4>
+                        <p class="text-gray-600 text-sm">Perfect for reading on the go. Affordable and accessible.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-sage-green to-warm-terracotta rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-book-open text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Hardcover</h4>
+                        <p class="text-gray-600 text-sm">Premium edition with dust jacket. Perfect for collectors.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tablet-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Digital</h4>
+                        <p class="text-gray-600 text-sm">Instant download. Read on your device anywhere, anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reader Reviews -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                    What Readers Are Saying
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how these books are transforming lives and inspiring authentic growth across Africa and beyond.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="testimonial-card rounded-xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b494?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" 
+                             alt="Sarah Wanjiru" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Sarah Wanjiru</h4>
+                            <p class="text-sm text-gray-500">Entrepreneur, Nairobi</p>
+                        </div>
+                    </div>
+                    <div class="flex text-african-gold text-sm mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="text-gray-700 leading-relaxed italic mb-6">
+                        "Rising From Roots completely transformed my perspective on success. Rosemary shows us that our African heritage isn't something to overcome, but our greatest strength to leverage."
+                    </blockquote>
+                    <div class="text-xs text-african-gold font-semibold bg-african-gold/10 px-3 py-1 rounded-full inline-block">Rising From Roots</div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card rounded-xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" 
+                             alt="David Kimani" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">David Kimani</h4>
+                            <p class="text-sm text-gray-500">CEO, Mombasa</p>
+                        </div>
+                    </div>
+                    <div class="flex text-sage-green text-sm mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="text-gray-700 leading-relaxed italic mb-6">
+                        "Voices of Strength gave me access to wisdom from 25 incredible women leaders. Each story is a masterclass in resilience and authentic leadership."
+                    </blockquote>
+                    <div class="text-xs text-sage-green font-semibold bg-sage-green/10 px-3 py-1 rounded-full inline-block">Voices of Strength</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card rounded-xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-warm-terracotta to-earth-brown rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">GM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Grace Muthoni</h4>
+                            <p class="text-sm text-gray-500">Teacher, Kisumu</p>
+                        </div>
+                    </div>
+                    <div class="flex text-warm-terracotta text-sm mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <blockquote class="text-gray-700 leading-relaxed italic mb-6">
+                        "Finding Purpose in the African Context helped me understand that my calling was right where I am. No need to abandon my roots to make a global impact."
+                    </blockquote>
+                    <div class="text-xs text-warm-terracotta font-semibold bg-warm-terracotta/10 px-3 py-1 rounded-full inline-block">Finding Purpose</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Club -->
+    <section class="py-16 lg:py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-african-gold/10 via-transparent to-sage-green/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    Join Our <span class="inspiration-gradient text-transparent bg-clip-text">Book Club</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Connect with like-minded readers, join monthly discussions, and get exclusive access to new releases and author insights.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="heading-font text-2xl font-bold mb-8">Book Club Benefits:</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-african-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-users text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-2">Monthly Virtual Discussions</h4>
+                                <p class="text-gray-300">Join live conversations with me and fellow readers from across the continent.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-african-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-star text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-2">Exclusive Content</h4>
+                                <p class="text-gray-300">Early access to new releases, bonus chapters, and behind-the-scenes insights.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-african-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-gift text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-2">Member Discounts</h4>
+                                <p class="text-gray-300">Special pricing on all books, courses, and coaching programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                    <h3 class="heading-font text-2xl font-bold mb-6">Join Today - Free!</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your full name" class="w-full bg-white/10 border border-white/20 rounded-lg py-4 px-6 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch">
+                        <input type="email" placeholder="Your email address" class="w-full bg-white/10 border border-white/20 rounded-lg py-4 px-6 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch">
+                        <select class="w-full bg-white/10 border border-white/20 rounded-lg py-4 px-6 text-white focus:outline-none focus:ring-2 focus:ring-african-gold mobile-touch">
+                            <option value="" class="text-gray-900">Select your country</option>
+                            <option value="kenya" class="text-gray-900">Kenya</option>
+                            <option value="uganda" class="text-gray-900">Uganda</option>
+                            <option value="tanzania" class="text-gray-900">Tanzania</option>
+                            <option value="rwanda" class="text-gray-900">Rwanda</option>
+                            <option value="other" class="text-gray-900">Other</option>
+                        </select>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="terms" class="mr-3 rounded border-white/20 focus:ring-african-gold">
+                            <label for="terms" class="text-sm text-gray-300">I agree to receive book club updates and exclusive content</label>
+                        </div>
+                        <button type="submit" class="w-full bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-105 mobile-touch">
+                            Join Book Club
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden mr-3">
+                            <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-10 h-10 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="text-white font-bold text-xl heading-font hidden">RN</span>
+                        </div>
+                        <span class="heading-font text-2xl font-bold">Rosemary Nzembi</span>
+                    </div>
+                    <p class="text-gray-300 max-w-md mb-6">
+                        East Africa's leading voice for authentic empowerment. Transforming lives through storytelling, coaching, and inspiration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://youtube.com/@nzembitv?si=lSN46LArChIt2gOF" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-african-gold transition-colors">Home</a></li>
+                        <li><a href="inspiration.html" class="text-gray-300 hover:text-african-gold transition-colors">Inspiration</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-african-gold transition-colors">About</a></li>
+                        <li><a href="coaching.html" class="text-gray-300 hover:text-african-gold transition-colors">Coaching</a></li>
+                        <li><a href="podcasts.html" class="text-gray-300 hover:text-african-gold transition-colors">Podcasts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="heading-font text-lg font-bold mb-6">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Free Downloads</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-african-gold transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-african-gold transition-colors">Book Club</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                    © 2025 Rosemary Nzembi - Kandid Xpressions. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Book club signup
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const terms = this.querySelector('input[type="checkbox"]').checked;
+            
+            if (name && email && email.includes('@') && terms) {
+                alert('Welcome to the book club! You\'ll receive a confirmation email with exclusive member content.');
+                this.reset();
+            } else {
+                alert('Please fill in all fields and agree to the terms.');
+            }
+        });
+
+        // Order book functionality (simplified)
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            if (link.textContent.includes('Order Now')) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Book ordering would integrate with e-commerce platform in production.');
+                });
+            }
+        });
+
+        // Free sample download
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            if (link.textContent.includes('Free Sample')) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Free sample download would be available here in production.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
