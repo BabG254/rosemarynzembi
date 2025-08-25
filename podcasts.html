@@ -17,7 +17,10 @@
                         'earth-brown': '#8B4513',
                         'warm-terracotta': '#CD853F',
                         'sage-green': '#9CAF88',
-                        'deep-amber': '#B8860B'
+                        'deep-amber': '#B8860B',
+                        'off-white': '#F5F5F0',
+                        'lime-soft': '#D9F99D',
+                        'lime-blend': '#F6FFED'
                     }
                 }
             }
@@ -32,6 +35,15 @@
             scroll-behavior: smooth;
             line-height: 1.6;
             color: #2C2C2C;
+            background: linear-gradient(135deg, #D9F99D 0%, #F6FFED 100%);
+        }
+        
+        .text-off-white {
+            color: #F5F5F0;
+        }
+        
+        .bg-off-white {
+            background-color: #F5F5F0;
         }
         
         .heading-font {
@@ -108,7 +120,7 @@
         }
     </style>
 </head>
-<body class="bg-white text-gray-800 antialiased">
+<body class="bg-lime-blend text-gray-800 antialiased">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,7 +190,7 @@
                         Authentic <span class="inspiration-gradient text-transparent bg-clip-text">Conversations</span>
                     </h1>
                     <div class="elegant-divider mb-8 lg:mx-0"></div>
-                    <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
+                    <p class="text-xl md:text-2xl text-gray-800 leading-relaxed mb-8">
                         ...transformative conversations revolving around; Faith, Personal experiences, Culture, Travel, Career, Entrepreneurship and other stories that help shape our lives. Our stories are like books that some people may otherwise never read. Come along & let's read together.
                     </p>
                     
@@ -215,7 +227,7 @@
                                 <span class="text-white font-bold text-3xl heading-font hidden">KX</span>
                             </div>
                             <h3 class="heading-font text-2xl font-bold text-gray-900 mb-2">Kandid Xpressions</h3>
-                            <p class="text-gray-600 text-center mb-6">Unfiltered conversations with everyday people, that impact & inspire real lives - one conversation at a time!</p>
+                            <p class="text-gray-600 text-center mb-6">Birth of Kandid Xpressions: The dream/vision for a podcast/talkshow platform was conceived in 2009, during my night devotion. Not knowing how to do it, listening to naysayers and fearing that it might not work, I put it in the back burner. In December of 2023, while reflecting on how I'd helped others step into their most fulfillingncareers, I decided to jump into my own! And I'm glad I did!</p>
                             <div class="waveform h-2 w-32 rounded-full mb-4"></div>
                             <p class="text-sm text-gray-500">New episodes every Tuesday</p>
                         </div>
@@ -226,7 +238,7 @@
     </section>
 
     <!-- Latest Episode -->
-    <section class="py-16 lg:py-24 bg-white">
+    <section class="py-16 lg:py-24 bg-off-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
@@ -295,15 +307,15 @@
     </section>
 
     <!-- Recent Episodes -->
-    <section class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-sage-green/5">
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-lime-soft to-lime-blend">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
                     Recent Episodes
                 </h2>
                 <div class="elegant-divider mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Dive into our library of transformative conversations with entrepreneurs, thought leaders, and everyday heroes changing lives.
+                <p class="text-xl text-gray-800 max-w-3xl mx-auto">
+                    Dive into our library of personal testimonials and conversations with entrepreneurs, thought leaders, and everyday heroes making a Service IMPACT.
                 </p>
             </div>
 
@@ -454,19 +466,19 @@
     </section>
 
     <!-- Popular Topics -->
-    <section class="py-16 lg:py-24 bg-white">
+    <section class="py-16 lg:py-24 bg-lime-soft">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
                     Popular Topics
                 </h2>
                 <div class="elegant-divider mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Explore conversations organized by themes that matter most to our community.
+                <p class="text-xl text-gray-800 max-w-3xl mx-auto">
+                    Explore conversations organized by themes that create meaningful Service IMPACT within our community.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Topic 1 -->
                 <div class="bg-gradient-to-br from-african-gold/5 to-african-gold/10 rounded-xl p-6 text-center hover:from-african-gold/10 hover:to-african-gold/20 transition-all cursor-pointer">
                     <div class="w-16 h-16 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center mx-auto mb-4">
@@ -493,7 +505,7 @@
                         <i class="fas fa-globe-africa text-white text-2xl"></i>
                     </div>
                     <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">African Culture</h4>
-                    <p class="text-gray-600 text-sm mb-4">Heritage, traditions, and modern African identity conversations.</p>
+                    <p class="text-gray-600 text-sm mb-4">Let's talk about our Culture! Does it hold as much value as it did in the olden days? What has changed? Do you agree with your native culture & the beliefs/practices that it enforces? Why or why not? Coming soon.</p>
                     <span class="text-warm-terracotta font-semibold text-sm">8 Episodes →</span>
                 </div>
 
@@ -505,6 +517,133 @@
                     <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">Mental Health</h4>
                     <p class="text-gray-600 text-sm mb-4">Wellness, therapy, healing, and mental health awareness discussions.</p>
                     <span class="text-earth-brown font-semibold text-sm">6 Episodes →</span>
+                </div>
+                
+                <!-- Topic 5: Parenting The Digital Teen -->
+                <div class="bg-gradient-to-br from-purple-500/5 to-purple-500/10 rounded-xl p-6 text-center hover:from-purple-500/10 hover:to-purple-500/20 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">Parenting The Digital Teen</h4>
+                    <p class="text-gray-600 text-sm mb-4">"No one pours new wine into old wineskins. Otherwise, the wine will burst the skins, and both the wine and the wineskins will be ruined. No, they pour new wine into new wineskins." (Matthew 9:17) In today's rapidly evolving digital world, we must adopt effective strategies for relevant parenting through dialogue, not dictatorship!</p>
+                    <span class="text-purple-500 font-semibold text-sm">New Series Coming Feb 2025! →</span>
+                </div>
+                
+                <!-- Topic 6: Service IMPACT -->
+                <div class="bg-gradient-to-br from-blue-500/5 to-blue-500/10 rounded-xl p-6 text-center hover:from-blue-500/10 hover:to-blue-500/20 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-teal-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hands-helping text-white text-2xl"></i>
+                    </div>
+                    <h4 class="heading-font text-lg font-bold text-gray-900 mb-2">Service IMPACT</h4>
+                    <p class="text-gray-600 text-sm mb-4">Personal testimonials highlighting how service to others creates meaningful impact and transforms communities.</p>
+                    <span class="text-blue-500 font-semibold text-sm">10 Episodes →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parenting The Digital Teen Feature Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-purple-100 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-purple-500/10 rounded-full px-4 py-2 mb-4">
+                    <span class="text-purple-600 font-medium text-sm">New Series Coming February 2025</span>
+                </div>
+                <h2 class="heading-font text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    Parenting The <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">Digital Teen</span>
+                </h2>
+                <div class="elegant-divider mb-8"></div>
+                <p class="text-xl text-gray-800 max-w-3xl mx-auto">
+                    A groundbreaking series exploring the challenges and opportunities of raising teenagers in today's digital world.
+                </p>
+            </div>
+
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <div class="text-2xl font-bold text-purple-600 mb-4">"No one pours new wine into old wineskins."</div>
+                        <p class="text-gray-700 mb-6">
+                            Matthew 9:17 teaches us that new approaches require new containers. Similarly, today's digital-native teens need parents who understand that traditional parenting methods must evolve to remain relevant and effective.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            In this series, we'll explore how parents can build meaningful connections with their teens by embracing dialogue over dictatorship, understanding over judgment, and curiosity over control.
+                        </p>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Understanding social media's influence on teen identity</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Building healthy digital boundaries without alienation</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Navigating online dangers while preserving trust</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full transition-all mobile-touch">
+                                <i class="fas fa-bell mr-2"></i>Notify Me When Available
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl p-6 shadow-xl flex items-center justify-center">
+                        <div class="relative w-full max-w-md">
+                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Teen using smartphone" class="w-full h-auto rounded-xl shadow-lg z-10 relative">
+                            <div class="absolute -bottom-4 -right-4 w-36 h-36 bg-purple-600 rounded-full flex items-center justify-center text-white p-4 shadow-lg">
+                                <div class="text-center">
+                                    <div class="font-bold">FEB</div>
+                                    <div class="text-2xl font-bold">2025</div>
+                                    <div class="text-xs uppercase">Launch Date</div>
+                                </div>
+                            </div>
+                            <div class="absolute -top-6 -left-6 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"></div>
+                            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Guests Preview -->
+            <div class="mt-16">
+                <h3 class="heading-font text-2xl font-bold text-center text-gray-900 mb-8">Featured Experts & Guests</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Dr. Sarah Kamau" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Dr. Sarah Kamau</h4>
+                        <p class="text-purple-600 text-sm mb-3">Child Psychologist</p>
+                        <p class="text-gray-600 text-sm">Expert in adolescent digital behavior and mental health impacts of social media.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="James Omondi" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">James Omondi</h4>
+                        <p class="text-purple-600 text-sm mb-3">Tech Education Specialist</p>
+                        <p class="text-gray-600 text-sm">Develops digital literacy programs for families navigating the online world.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+                            <span>+</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">More Experts</h4>
+                        <p class="text-purple-600 text-sm mb-3">Coming Soon</p>
+                        <p class="text-gray-600 text-sm">Parents, teens, educators and faith leaders sharing real experiences and solutions.</p>
+                    </div>
                 </div>
             </div>
         </div>
