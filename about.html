@@ -68,35 +68,42 @@
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <!-- Premium Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
+            <div class="flex items-center justify-between h-16">
+                <!-- Elegant Logo -->
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden">
                         <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <span class="text-white font-bold text-lg heading-font hidden">RN</span>
                     </div>
                     <div class="block">
-                        <h1 class="heading-font text-lg sm:text-xl font-semibold text-gray-900">Rosemary Nzembi</h1>
-                        <p class="text-xs text-gray-500 -mt-1 hidden sm:block">Inspiring Lives Through Story</p>
+                        <h1 class="heading-font text-lg sm:text-xl font-semibold text-white">Rosemary Nzembi</h1>
+                        <p class="text-xs text-african-gold -mt-1 hidden sm:block">Inspiring Lives Through Story</p>
                     </div>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Home</a>
-                    <a href="inspiration.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Inspiration</a>
+                    <a href="index.html" class="text-gray-300 hover:text-african-gold font-medium transition-colors">Home</a>
+                    <a href="inspiration.html" class="text-gray-300 hover:text-african-gold font-medium transition-colors">Inspiration</a>
                     <a href="about.html" class="text-african-gold font-medium">About</a>
-                    <a href="coaching.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Coaching</a>
-                    <a href="podcasts.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Podcasts</a>
-                    <a href="books.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Books</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-african-gold font-medium transition-colors">Contact</a>
+                    <a href="coaching.html" class="text-gray-300 hover:text-african-gold font-medium transition-colors">Coaching</a>
+                    <a href="podcasts.html" class="text-gray-300 hover:text-african-gold font-medium transition-colors">Podcasts</a>
+                    <a href="books.html" class="text-gray-300 hover:text-african-gold font-medium transition-colors">Books</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-african-gold font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- CTA Button (Desktop) -->
+                <div class="hidden lg:block">
+                    <a href="coaching.html" class="bg-african-gold hover:bg-deep-amber text-white font-semibold px-6 py-2 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                        START YOUR JOURNEY
+                    </a>
                 </div>
                 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-african-gold focus:outline-none mobile-touch">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-300 hover:text-african-gold focus:outline-none mobile-touch">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -105,19 +112,19 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">
+        <div id="mobile-menu" class="lg:hidden hidden bg-gray-900 border-t border-gray-800">
             <div class="px-4 py-2 space-y-1">
-                <a href="index.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Home</a>
-                <a href="inspiration.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Inspiration</a>
+                <a href="index.html" class="block py-3 text-gray-300 hover:text-african-gold font-medium mobile-touch">Home</a>
+                <a href="inspiration.html" class="block py-3 text-gray-300 hover:text-african-gold font-medium mobile-touch">Inspiration</a>
                 <a href="about.html" class="block py-3 text-african-gold font-medium mobile-touch">About</a>
-                <a href="coaching.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Coaching</a>
-                <a href="podcasts.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Podcasts</a>
-                <a href="books.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Books</a>
-                <a href="contact.html" class="block py-3 text-gray-700 hover:text-african-gold font-medium mobile-touch">Contact</a>
+                <a href="coaching.html" class="block py-3 text-gray-300 hover:text-african-gold font-medium mobile-touch">Coaching</a>
+                <a href="podcasts.html" class="block py-3 text-gray-300 hover:text-african-gold font-medium mobile-touch">Podcasts</a>
+                <a href="books.html" class="block py-3 text-gray-300 hover:text-african-gold font-medium mobile-touch">Books</a>
+                <a href="contact.html" class="block py-3 text-gray-300 hover:text-african-gold font-medium mobile-touch">Contact</a>
                 <!-- Mobile CTA Button -->
                 <div class="pt-3 pb-2">
                     <a href="coaching.html" class="block w-full bg-african-gold hover:bg-deep-amber text-white font-semibold py-3 px-6 rounded-full transition-all text-center mobile-touch">
-                        Start Your Journey
+                        START YOUR JOURNEY
                     </a>
                 </div>
             </div>
@@ -446,7 +453,7 @@
                         <span class="heading-font text-2xl font-bold">Rosemary Nzembi</span>
                     </div>
                     <p class="text-gray-300 max-w-md mb-6">
-                        East Africa's leading voice for authentic empowerment. Transforming lives through storytelling, coaching, and inspiration.
+                        As East Africa's rising voice of hope, Rosemary is committed to transforming Lives globally through tangible, relatable and realistic platforms. These include but are not limited to; Professional Coaching, Philanthropic Services & Inspirational Stories from all over the world. Because authentic stories have the power to bridge cultural, religious and other social gaps.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://youtu.be/ATZM-QHdHlg?si=JO8vCdqF6dA8b8W8" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
@@ -493,7 +500,7 @@
             <!-- Bottom Bar -->
             <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
-                    © 2025 Rosemary Nzembi - Kandid Xpressions. All rights reserved.
+                    © 2025 Rosemary Nzembi & Kandid Xpressions! All rights reserved.
                 </p>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-african-gold transition-colors text-sm">Privacy Policy</a>
