@@ -136,9 +136,11 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Elegant Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden">
-                        <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <span class="text-white font-bold text-lg heading-font hidden">RN</span>
+                    <div class="w-10 h-10 rounded-full overflow-hidden">
+                        <img src="logo.png" alt="Rosemary Nzembi Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-gradient-to-br from-african-gold to-deep-amber rounded-full hidden items-center justify-center">
+                            <span class="text-white font-bold text-lg heading-font">RN</span>
+                        </div>
                     </div>
                     <div class="block">
                         <h1 class="heading-font text-lg sm:text-xl font-semibold text-white">Rosemary Nzembi, CPC</h1>
@@ -283,12 +285,15 @@
                         <p class="text-gray-500 text-lg mt-2"> <strong>Certified Professional Coach & Inspirational Speaker</strong></p>
 
                         <!-- Action Buttons -->
-                        <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6">
+                        <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
                             <button class="group bg-african-gold hover:bg-deep-amber text-gray-900 px-8 py-4 rounded-full font-black transition-all transform hover:scale-105 mobile-touch uppercase tracking-wider text-lg shadow-lg">
                                 <i class="fas fa-share-alt mr-3 group-hover:animate-pulse"></i>Share Inspiration
                             </button>
                             <button class="group bg-white hover:bg-gray-50 border-2 border-gray-300 hover:border-african-gold text-gray-700 hover:text-african-gold px-8 py-4 rounded-full font-black transition-all mobile-touch uppercase tracking-wider text-lg">
                                 <i class="fas fa-bookmark mr-3 group-hover:scale-110 transition-transform"></i>Save Quote
+                            </button>
+                            <button onclick="openStoryModal()" class="group bg-gradient-to-r from-sage-green to-warm-terracotta hover:from-warm-terracotta hover:to-sage-green text-white px-8 py-4 rounded-full font-black transition-all transform hover:scale-105 mobile-touch uppercase tracking-wider text-lg shadow-lg">
+                                <i class="fas fa-book-open mr-3 group-hover:animate-pulse"></i>My Story
                             </button>
                         </div>
                         
@@ -363,16 +368,16 @@
                             <div class="flex items-center space-x-4">
                                 <img src="logo.png"
                                      alt="Rosemary Nzembi" 
-                                     class="w-12 h-12 rounded-full object-cover border-2 border-african-gold/20">
+                                     class="w-12 h-12 rounded-full object-cover">
                                 <div>
                                     <p class="font-black text-gray-900 text-lg">Rosemary Nzembi</p>
                                     <p class="text-sm text-gray-500">CPC • Inspirational Speaker</p>
                                 </div>
                             </div>
-                            <a href="inspiration.html" class="group bg-african-gold hover:bg-deep-amber text-gray-900 font-black px-6 py-3 rounded-full transition-all transform hover:scale-105 mobile-touch uppercase tracking-wide text-sm">
+                            <button onclick="openStoryModal()" class="group bg-african-gold hover:bg-deep-amber text-gray-900 font-black px-6 py-3 rounded-full transition-all transform hover:scale-105 mobile-touch uppercase tracking-wide text-sm">
                                 Read More 
                                 <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1396,6 +1401,138 @@
         </div>
     </footer>
 
+    <!-- Story Modal -->
+    <div id="storyModal" class="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm hidden">
+        <div class="min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[85vh] overflow-hidden">
+                <!-- Modal Header -->
+                <div class="bg-gradient-to-r from-african-gold to-deep-amber px-8 py-6 relative">
+                    <button onclick="closeStoryModal()" class="absolute top-4 right-4 text-white hover:text-gray-200 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-all">
+                        ×
+                    </button>
+                    <div class="text-center">
+                        <h2 class="heading-font text-3xl md:text-4xl font-black text-white mb-2">Beyond The Shadow</h2>
+                        <p class="text-white/90 text-lg font-medium">A true story of rejection, betrayal, faith & resilience</p>
+                        <div class="flex items-center justify-center mt-3 text-white/80 text-sm">
+                            <span class="bg-white/20 px-3 py-1 rounded-full mr-3">Book Excerpt</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">45 min read</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal Content -->
+                <div class="p-8 overflow-y-auto max-h-[calc(85vh-140px)] prose prose-lg max-w-none">
+                    <div class="text-gray-700 leading-relaxed space-y-6">
+                        <div class="text-center mb-8">
+                            <p class="text-xl italic text-gray-600 mb-4">One village maverick, determined to find her purpose</p>
+                            <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-african-gold to-transparent mx-auto"></div>
+                        </div>
+
+                        <h3 class="heading-font text-2xl font-bold text-african-gold mb-4">Introduction</h3>
+                        <p>Some call her a wild dreamer, gambler, daredevil while others, well; they just don't have a name for her audacious character. For many people, finding purpose and the positive motivation to live it up remains an elusive dream, so they often give up. Rosemary Nzembi, who was rejected and abandoned at birth, grew up in a very compromised environment. Through faith in God, hard work and a strong belief in her dreams, she has certainly discovered her purpose.</p>
+
+                        <p>She helps others overcome their hang-ups, discover inner strengths and ultimate purpose for living. Her warm personality is electrifying and she thrives on helping others rise up above their obstacles and pursue their wildest dreams, just like she has. Rosemary who is a globally recognized Certified Professional Coach and Inspirational Speaker, has mastered the art of resilience, strategic networking and her motivational DNA.</p>
+
+                        <p>Along with numerous professional development courses, she holds an Associates Degree in Computer Information Technology, from North Lake College (USA). She is a seasoned veteran in Project Management, Global Strategic Procurement, Personnel Training and Non-Profit Management. With godly wisdom, tenacious determination and sincere love for others, Rosemary's life story has inspired many people all over the world; to rise up above their social, spiritual and economic limitations. Being around her makes others feel like they can take on anything in life, with bold confidence.</p>
+
+                        <p>She is the riveting force behind Twinkle Little Stars, Inc. - a US based non-profit organization, which she founded in 2006. Her diverse professional experience of over 25 years spans across inter-continental boundaries. Through her coaching programs Rosemary has been privileged to work with some of America's largest churches, international high schools, colleges and community organizations. Some of her philanthropic partners have included; Big Brothers Big Sisters (USA), Healing Hands International (USA & Africa) and Rotary Club International, the latter of which she is a member.</p>
+
+                        <p>She leverages on cultural diversity, excellent people skills and ongoing professional development, to harness her success. A veteran risk taker, she strongly believes that "anything becomes possible, when you shift your perspective gears and engage the right attitude." <em>"Without God nothing is possible but with Him, nothing is impossible"</em>. Rosemary has been featured on NBC TV (USA), Dallas Morning News (USA) and Fort Worth Star Telegram (USA). In her native homeland of Kenya, she has captured the attention of GBS TV, Family Media TV and Kenya's leading news channel, The Citizen TV.</p>
+
+                        <h3 class="heading-font text-2xl font-bold text-african-gold mb-4 mt-8">The Early Years</h3>
+                        <p>From an early age, Rosemary determined that if she was going to make it in life, she would have to change several aspects of her culture. She had to do a major mental transplant that would totally transform her mindset, and hopefully that of her family, and community. She was convinced beyond the shadow of all doubt, that there was hope for a better life, beyond the poverty stricken village where she grew up.</p>
+
+                        <p>Born to an unwed teenage mother, Rosemary's future success hung by the string, as she constantly grappled to make sense of her compromised childhood, and the male chauvinism that riddled the community. She and her elder brother grew up under the care of their maternal grandmother, who became widowed at the tender age of 37. No one in her family had obtained adequate formal education, an element that threatened their future family survival.</p>
+
+                        <p>Her grandmother got married before completing fourth grade education and her mother dropped out (pregnant), before completing eighth grade. With that family trend, the most anyone would have predicted for Rosemary, would be tenth grade education, get married to another village illiterate and settle in the remote village of Matetani; making scanty wages from hard manual labor. This, at best, would set the highest family record for women education in her immediate family.</p>
+
+                        <h3 class="heading-font text-2xl font-bold text-african-gold mb-4 mt-8">Breaking Barriers</h3>
+                        <p>For an estimated 90% of girls in Matetani village where Rosemary traces her roots, marriage was the highest target and definition of success, even if it meant dropping out of school and marrying a fellow drop-out. Rosemary was determined to change that dynamic, even if it meant leaving her family, traveling and settling in foreign land, all in pursuit of change and significance.</p>
+
+                        <p>Her determination to excel was greater than any social obstacle that stood in the way, including the abject poverty that had become the only familiar way of life for three family generations. Her confidence can be traced to her self-affirmations and some Scriptural principles, which she had come to believe in. Psalms 139:14, for example, reaffirmed her value and beauty. <em>"I'm fearfully and wonderfully made…"</em> She loves music and theatre and started performing on stage at the young age of four.</p>
+
+                        <div class="bg-gradient-to-r from-african-gold/10 to-deep-amber/10 p-6 rounded-xl my-8 border-l-4 border-african-gold">
+                            <p class="text-lg italic font-medium text-gray-800">"She dreamt of becoming an actress, musician/singer, back-up singer; just anything to be on stage, so to speak."</p>
+                        </div>
+
+                        <p>From a very young age, Rosemary was not afraid of people and didn't mind getting in trouble, for politely interrupting adult conversations. In essence, she just wanted to be heard. She enjoyed speaking and had hoped to become a media personality, some day in her adult life. No one in her family or community had followed that path, so she would have to blaze a new trail.</p>
+
+                        <p>In fact, she used to call an imaginary audience and pretend to be a news newscaster, flipping through her notebooks, which would be her imaginary news bulletin notes. This was especially during play time with friends or dinner time with family. She sang and danced to family guests, recited memory verses in Sunday School sang in school choirs. Her grandmother was challenged by the assertive behavior and kept her on a leash, for fear that she could run away from home, in search for her fantasy life.</p>
+
+                        <h3 class="heading-font text-2xl font-bold text-african-gold mb-4 mt-8">The Struggles</h3>
+                        <p>Her overambitious character almost cost her life, when she was only 19. From an early age, her tenacious personality set her apart from her peers in the community. She didn't believe in marriage as the ultimate definition of success for young women, so she refused to settle in the village after completing high school.</p>
+
+                        <p>Her wild curiosity was just setting in, so she set off to the city. What she didn't realize, however, was that her audacious determination could result in social branding and rejection. She tenaciously held on to her convictions, notwithstanding frequent ridicule from friends and family; who perceived her to be rebellious and demon possessed.</p>
+
+                        <div class="bg-gray-50 p-6 rounded-xl my-6">
+                            <h4 class="font-bold text-lg mb-3 text-gray-800">The Pain of Survival</h4>
+                            <p class="text-gray-700">Surviving the wounds of rape and sexual molestation as a young girl, fueled much of her pursuit for change. This took the grace of God and a dose of her strong personality, which had become a challenge to the family and alienated her from her friends.</p>
+                        </div>
+
+                        <p>In a society where children were forbidden to confront their seniors, Rosemary had no one to report her struggles to, leaving her to painfully leak her own wounds, in the quiet of her young soul. She bore the agony of adversity and suffered a lonesome childhood, with no one to confide in, regarding her crippling emotional brokenness.</p>
+
+                        <h3 class="heading-font text-2xl font-bold text-african-gold mb-4 mt-8">Finding Hope</h3>
+                        <p>It was during a high school youth camp at age fifteen, that she caught a glimpse of who she really was. It was the beginning of her healing process, a journey that would take several years to complete. She approached one of the camp counselors who had just preached a powerful message on personal identity and self esteem, reassuring the kids that their future was bright and their life had purpose.</p>
+
+                        <div class="bg-gradient-to-r from-sage-green/10 to-warm-terracotta/10 p-6 rounded-xl my-8 border-l-4 border-sage-green">
+                            <p class="text-lg font-medium text-gray-800 mb-3">Key Scripture Verses that Transformed Her Life:</p>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><strong>1 Timothy 4:12:</strong> <em>"Do not let anyone look down on you because you're young, but set an example in life, love and faith…"</em></li>
+                                <li><strong>Psalms 27:10:</strong> <em>"Even though my father and mother reject me, my God shall accept me."</em></li>
+                                <li><strong>Jeremiah 29:11:</strong> <em>"For I know the plans I have for you….not to harm you, but to give you a hope and a future."</em></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="heading-font text-2xl font-bold text-african-gold mb-4 mt-8">The Journey to America</h3>
+                        <p>After many years of prayer, hard work, stumbling and persistence, she finally found her wings to fly in 1998. After a short stint in London she went back to Kenya in the spring of 1999; determined to sell all her belongings and move back to London. Her good friends however, advised her otherwise. To consider the United States of America instead, adding that there were better college and career opportunities for someone of her caliber.</p>
+
+                        <p>She landed in America on a freezing winter night at the end of 1999; amidst the Y2K frenzy. People feared that everything would come crashing down and many canceled their travel plans, especially if it involved flying. Not so for Rosemary, whose ardor for a better life was stronger than the fear of any technical crash.</p>
+
+                        <p>She arrived on a student visa, where she studied Computer Information Technology and Operations Management, among many Professional Development courses. Among her top goals were to gain college education, first world professional experience, explore world cultures and hopefully one day; bring hope and light back to her remote village in Kenya.</p>
+
+                        <h3 class="heading-font text-2xl font-bold text-african-gold mb-4 mt-8">Full Circle</h3>
+                        <p>During her annual vacation, she and her friends would travel to rural Kenyan schools, bringing school supplies, uniforms and the joy of Christmas; to some of the most disadvantaged kids in her community. Her long term plan was to establish an alternative education program in Kenya, coaching and training young people to reach their highest potential.</p>
+
+                        <div class="bg-gradient-to-r from-african-gold/10 to-deep-amber/10 p-6 rounded-xl my-8">
+                            <p class="text-lg italic font-medium text-gray-800">"She chose to follow her heart. Like Oprah Winfrey once said, 'When the heart is willing the feet will follow.' It was an Aha! Moment! Rosemary believed that when you let passion lead, money would always follow…."</p>
+                        </div>
+
+                        <p>Today, Rosemary who has not drawn a salary since the Fall of 2011 lives in Kenya, where she's built a recreational learning facility, which plays host home for missionaries & volunteers. She enjoys speaking to high school kids and the general youth, and therefore travels back and forth between Kenya and the United States.</p>
+
+                        <p>With the help of friends in Kenya and the US, the program is helping many young people discover their strengths, align with their passion and reclaim their eroded self esteem. Through US-based Twinkle Little Stars, Rosemary has been doing cultural exchange projects for the youth of Africa and the western world.</p>
+
+                        <div class="text-center mt-10 p-6 bg-gray-50 rounded-xl">
+                            <h4 class="heading-font text-xl font-bold text-african-gold mb-3">Mission Statement</h4>
+                            <p class="text-gray-700 italic">"They exist to Educate, Equip and Empower young people, to live a life of purpose and succeed at being themselves, just like Rosemary has. She hopes that her story would liberate and inspire many people, young and old, to overcome their past hang-ups and live a life of purpose, on purpose."</p>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-african-gold/10 rounded-lg">
+                            <p class="text-sm text-gray-600 text-center">
+                                <strong>Excerpt from "Beyond The Shadow"</strong> by Rosemary Nzembi<br>
+                                Her complete story and charitable work have been featured on NBC TV, Dallas Morning News, Fort Worth Star Telegram, GBS TV, Family Media TV and Kenya's Citizen TV.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal Footer -->
+                <div class="bg-gray-50 px-8 py-4 flex justify-between items-center">
+                    <div class="text-sm text-gray-600">
+                        <span class="font-semibold">45 minutes reading time</span> • Book excerpt
+                    </div>
+                    <div class="flex space-x-3">
+                        <button onclick="closeStoryModal()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-full font-semibold transition-all">
+                            Close
+                        </button>
+                        <a href="books.html" class="bg-african-gold hover:bg-deep-amber text-white px-6 py-2 rounded-full font-semibold transition-all">
+                            Get Full Book
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript for interactive functionality -->
     <script>
                     document.addEventListener('DOMContentLoaded', function() {
@@ -1440,6 +1577,43 @@
                 mobileMenuBtn.addEventListener('click', function() {
                     mobileMenu.classList.toggle('hidden');
                 });
+            }
+        });
+
+        // Story Modal Functions
+        function openStoryModal() {
+            const modal = document.getElementById('storyModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Animate in
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                modal.style.transition = 'opacity 0.3s ease-in-out';
+            }, 10);
+        }
+
+        function closeStoryModal() {
+            const modal = document.getElementById('storyModal');
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('storyModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeStoryModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeStoryModal();
             }
         });
 
