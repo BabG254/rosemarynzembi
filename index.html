@@ -263,8 +263,11 @@
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto mt-6 leading-relaxed">
                     Think about Love, Faith, Hope, Success, Health & all the other good things that your heart desires. "As a man thinketh in his heart, so is he." Proverbs 23:7. This phrase was popularized by James Allans 1903 self-help book; which promoted the idea that positive thinking leads to a positive life. Of course it takes hard work and personal discipline!
                 </p>
+                <button id="showDailyAffirmation" class="mt-8 bg-african-gold hover:bg-deep-amber text-white px-8 py-3 rounded-full font-bold transition-all transform hover:scale-105 mobile-touch shadow-lg inline-flex items-center">
+                    <i class="fas fa-lightbulb mr-3"></i>Get Today's Affirmation
+                </button>
             </div>
-            
+
             <!-- Premium Featured Quote Card -->
             <div class="max-w-5xl mx-auto mb-20">
                 <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden magazine-card border border-gray-200 hover:shadow-3xl transition-all duration-700 relative">
@@ -276,7 +279,7 @@
                         </div>
                         
                         <!-- Quote Text -->
-                        <blockquote class="heading-font text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-10 leading-[1.2] font-bold">
+                        <blockquote id="quoteText" class="heading-font text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-10 leading-[1.2] font-bold">
                             "Your story is not just yours alone—it's a bridge that connects hearts, heals wounds, and lights the path for others to follow."
                         </blockquote>
                         
@@ -286,17 +289,112 @@
 
                         <!-- Action Buttons -->
                         <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-                            <button class="group bg-african-gold hover:bg-deep-amber text-gray-900 px-8 py-4 rounded-full font-black transition-all transform hover:scale-105 mobile-touch uppercase tracking-wider text-lg shadow-lg">
+                            <button id="shareQuote" class="group bg-african-gold hover:bg-deep-amber text-gray-900 px-8 py-4 rounded-full font-black transition-all transform hover:scale-105 mobile-touch uppercase tracking-wider text-lg shadow-lg">
                                 <i class="fas fa-share-alt mr-3 group-hover:animate-pulse"></i>Share Quote
                             </button>
-                            <button class="group bg-white hover:bg-gray-50 border-2 border-gray-300 hover:border-african-gold text-gray-700 hover:text-african-gold px-8 py-4 rounded-full font-black transition-all mobile-touch uppercase tracking-wider text-lg">
+                            <button id="saveQuote" class="group bg-white hover:bg-gray-50 border-2 border-gray-300 hover:border-african-gold text-gray-700 hover:text-african-gold px-8 py-4 rounded-full font-black transition-all mobile-touch uppercase tracking-wider text-lg">
                                 <i class="fas fa-bookmark mr-3 group-hover:scale-110 transition-transform"></i>Save Quote
                             </button>
                             <button onclick="openStoryModal()" class="group bg-gradient-to-r from-sage-green to-warm-terracotta hover:from-warm-terracotta hover:to-sage-green text-white px-8 py-4 rounded-full font-black transition-all transform hover:scale-105 mobile-touch uppercase tracking-wider text-lg shadow-lg">
                                 <i class="fas fa-book-open mr-3 group-hover:animate-pulse"></i>My Story
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Affirmation Modal -->
+            <div id="affirmationModal" class="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm hidden">
+                <div class="min-h-screen flex items-center justify-center p-4">
+                    <div class="bg-white rounded-3xl shadow-2xl max-w-3xl w-full overflow-hidden transform transition-all">
+                        <!-- Modal Header -->
+                        <div class="bg-gradient-to-r from-african-gold to-deep-amber px-8 py-6 relative">
+                            <button onclick="closeAffirmationModal()" class="absolute top-4 right-4 text-white hover:text-gray-200 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-all">
+                                ×
+                            </button>
+                            <div class="text-center">
+                                <h2 class="heading-font text-3xl font-black text-white mb-2">Today's Affirmation</h2>
+                                <p class="text-white/90 text-lg font-medium">Speak this with conviction</p>
+                            </div>
+                        </div>
                         
+                        <!-- Modal Content -->
+                        <div class="p-12 text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-african-gold/30 to-deep-amber/30 rounded-full flex items-center justify-center mx-auto mb-8">
+                                <i class="fas fa-lightbulb text-african-gold text-3xl"></i>
+                            </div>
+                            
+                            <blockquote id="todaysAffirmation" class="heading-font text-3xl text-gray-900 mb-8 leading-relaxed font-bold">
+                                "I am worthy of love just for being who I am."
+                            </blockquote>
+                            
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+                                <button id="shareAffirmation" class="bg-african-gold hover:bg-deep-amber text-gray-900 px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 mobile-touch flex items-center">
+                                    <i class="fas fa-share-alt mr-2"></i>Share Affirmation
+                                </button>
+                                <button onclick="saveAffirmationToFavorites()" class="bg-white hover:bg-gray-50 border-2 border-gray-300 hover:border-african-gold text-gray-700 hover:text-african-gold px-8 py-4 rounded-full font-bold transition-all mobile-touch flex items-center">
+                                    <i class="fas fa-bookmark mr-2"></i>Save to Favorites
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Share Modal (used for both quote and affirmation) -->
+            <div id="shareModal" class="fixed inset-0 z-[10000] bg-black/80 backdrop-blur-sm hidden">
+                <div class="min-h-screen flex items-center justify-center p-4">
+                    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
+                        <div class="px-6 py-4 border-b border-gray-200">
+                            <h3 class="text-lg font-bold text-gray-900">Share This</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid grid-cols-4 gap-4 mb-6">
+                                <button onclick="shareContent('facebook')" class="flex flex-col items-center justify-center p-4 rounded-lg hover:bg-blue-50">
+                                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white mb-2">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <span class="text-xs">Facebook</span>
+                                </button>
+                                <button onclick="shareContent('twitter')" class="flex flex-col items-center justify-center p-4 rounded-lg hover:bg-blue-50">
+                                    <div class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white mb-2">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <span class="text-xs">Twitter</span>
+                                </button>
+                                <button onclick="shareContent('whatsapp')" class="flex flex-col items-center justify-center p-4 rounded-lg hover:bg-green-50">
+                                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white mb-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <span class="text-xs">WhatsApp</span>
+                                </button>
+                                <button onclick="shareContent('email')" class="flex flex-col items-center justify-center p-4 rounded-lg hover:bg-gray-50">
+                                    <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white mb-2">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <span class="text-xs">Email</span>
+                                </button>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <p class="text-sm text-gray-500 mb-2">Or copy this link:</p>
+                                <div class="flex">
+                                    <input id="shareLink" type="text" class="flex-1 border border-gray-300 rounded-l-lg px-4 py-2 text-sm" readonly value="">
+                                    <button id="copyLink" class="bg-african-gold hover:bg-deep-amber text-white px-4 py-2 rounded-r-lg transition-all">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-end">
+                                <button onclick="closeShareModal()" class="text-gray-600 hover:text-gray-800 font-medium">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>              
                         <!-- Social Proof -->
                         <div class="mt-10 flex items-center justify-center space-x-8 text-gray-500">
                             <div class="flex items-center">
@@ -331,7 +429,7 @@
                 </h2>
                 <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-african-gold to-transparent mx-auto mb-8"></div>
                 <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Fresh insights, Powerful Success Stories, podcasts, and other transformative content to inspire you for growth and personal motivation.
+                    Fresh insights, Powerful Success Stories, Podcasts, and other transformative content; to inspire you for growth and increase your personal motivation.
                 </p>
             </div>
 
@@ -367,15 +465,12 @@
                     </div>
                     <div class="p-8 lg:p-10 text-white">
                         <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                            These powerful testimonies and essential principles have helped others discover their unique identity, reclaim their individual power and pursue their authentic purpose, with uncompromised confidence!
+                            These powerful testimonies and essential principles have helped others discover their unique identity, reclaim their erroded self image and pursue their authentic calling, with uncompromised confidence!
                         </p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-4">
                                 <div class="bg-african-gold/20 text-african-gold px-4 py-2 rounded-full text-sm font-bold">
                                     Testimonies
-                                </div>
-                                <div class="bg-white/10 text-white px-4 py-2 rounded-full text-sm">
-                                    Purpose Discovery
                                 </div>
                             </div>
                             <a href="https://youtube.com/@nzembitv?si=p863bhnYalx-pGfs" target="_blank" class="bg-african-gold hover:bg-deep-amber text-gray-900 font-black px-8 py-3 rounded-full transition-all transform hover:scale-105 mobile-touch uppercase tracking-wide">
@@ -408,7 +503,7 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">Practical strategies for overcoming obstacles with resilience and grace.</p>
                         <div class="flex items-center justify-between">
                             <div class="text-sm text-gray-500">
-                                <span class="font-bold">Episode 42</span> • 35 min
+                                <span class="font-bold"></span> • 35 min
                             </div>
                             <a href="podcasts.html" class="text-african-gold hover:text-deep-amber font-black mobile-touch text-lg group">
                                 Listen 
@@ -878,7 +973,7 @@
                     </h2>
                     <div class="elegant-divider mb-8 lg:mx-0"></div>
                     <p class="text-xl text-gray-600 leading-relaxed mb-8">
-                        ...transformative conversations revolving around; Faith, Personal experiences, Culture, Travel, Career, Entrepreneurship and other stories that help shape our lives. Our stories are like books that some people may otherwise never read. Come along & let's read together.
+                        Through our weekly Podcast, we dive into Kandid conversations revolving around; Faith, Personal experiences, Culture, Travel, Career, Entrepreneurship and other stories that help shape our lives. Our stories are like books that some people may otherwise never read. Come along & let's read together.
                     </p>
                     
                     <div class="space-y-4 mb-8">
@@ -915,13 +1010,13 @@
                 <div class="magazine-card bg-gradient-to-br from-african-gold/5 to-sage-green/5 rounded-2xl p-8 shadow-xl">
                     <div class="bg-white rounded-xl p-6 mb-6 shadow-lg">
                         <div class="flex items-center mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-african-gold to-deep-amber rounded-full flex items-center justify-center overflow-hidden mr-4 shadow-lg">
+                            <div class="w-16 h-16 flex items-center justify-center mr-4">
                                 <img src="logo.png" alt="Kandid Xpressions" class="w-14 h-14 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <span class="text-white font-bold text-2xl heading-font hidden">KX</span>
+                                <span class="text-african-gold font-bold text-2xl heading-font hidden">KX</span>
                             </div>
                             <div>
                                 <h3 class="heading-font text-xl font-bold text-gray-900">Latest Episode</h3>
-                                <p class="text-sm text-gray-500">Episode 52 • January 15, 2025</p>
+                                <p class="text-sm text-gray-500">• January 15, 2025</p>
                             </div>
                         </div>
                         <h4 class="heading-font text-lg font-bold text-gray-900 mb-3">
@@ -938,15 +1033,11 @@
                     
                     <div class="grid grid-cols-3 gap-4 text-center text-sm">
                         <div>
-                            <div class="text-xl font-bold text-african-gold">50+</div>
-                            <div class="text-gray-600">Episodes</div>
-                        </div>
-                        <div>
                             <div class="text-xl font-bold text-african-gold">10K+</div>
                             <div class="text-gray-600">Listeners</div>
                         </div>
                         <div>
-                            <div class="text-xl font-bold text-african-gold">25+</div>
+                            <div class="text-xl font-bold text-african-gold">50+</div>
                             <div class="text-gray-600">Countries</div>
                         </div>
                     </div>
@@ -985,17 +1076,6 @@
                                 <span class="ml-2 text-sm text-gray-600">(127 reviews)</span>
                             </div>
                             <p class="text-sm text-gray-700 italic">"Life-changing wisdom for young parents everywhere."</p>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-4 text-center text-sm mb-6">
-                            <div>
-                                <div class="text-lg font-bold text-african-gold">6</div>
-                                <div class="text-gray-600">Published Books</div>
-                            </div>
-                            <div>
-                                <div class="text-lg font-bold text-african-gold">15K+</div>
-                                <div class="text-gray-600">Copies Sold</div>
-                            </div>
                         </div>
                         
                         <a href="books.html" class="w-full bg-african-gold hover:bg-deep-amber text-white font-semibold py-3 px-6 rounded-full transition-all text-center block mobile-touch">
@@ -1331,31 +1411,6 @@
             </div>
         </div>
     </footer>
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full flex items-center justify-center text-white transition duration-300">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full flex items-center justify-center text-white transition duration-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full flex items-center justify-center text-white transition duration-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full flex items-center justify-center text-white transition duration-300">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full flex items-center justify-center text-white transition duration-300">
-                        <i class="fab fa-apple"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full flex items-center justify-center text-white transition duration-300">
-                        <i class="fab fa-spotify"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <!-- Story Modal -->
     <div id="storyModal" class="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm hidden">
         <div class="min-h-screen flex items-center justify-center p-4">
@@ -1490,6 +1545,232 @@
 
     <!-- JavaScript for interactive functionality -->
     <script>
+                // List of daily affirmations
+                const affirmations = [
+                    "I am worthy of love just for being who I am.",
+                    "My potential to succeed is infinite.",
+                    "I am in charge of how I feel and today I choose happiness.",
+                    "I have the power to create change.",
+                    "I am becoming the best version of myself.",
+                    "I am enough, just as I am.",
+                    "Every challenge I face is an opportunity to grow stronger.",
+                    "I trust myself to make the right decision.",
+                    "My thoughts and feelings are valid.",
+                    "I deserve to take up space and be heard.",
+                    "I have the courage to follow my heart.",
+                    "I am stronger than my fears.",
+                    "I give myself permission to do what is right for me.",
+                    "My life is a gift and I appreciate everything I have.",
+                    "I release all negative energy from my mind and body.",
+                    "I am resilient, strong, and brave.",
+                    "I radiate confidence, certainty and optimism.",
+                    "I forgive myself for my mistakes and move forward with love.",
+                    "I am surrounded by supportive, positive people.",
+                    "Everything I need is already within me.",
+                    "I am open to receiving all the wealth life offers me.",
+                    "I trust the journey, even when I do not understand it.",
+                    "I choose to focus on what I can control.",
+                    "My body is healthy; my mind is brilliant; my soul is tranquil.",
+                    "I am at peace with my past and excited about my future.",
+                    "I choose to see the good in the people I interact with today.",
+                    "My ability to conquer my challenges is limitless.",
+                    "I possess the qualities needed to be extremely successful.",
+                    "My voice matters and what I have to say is important."
+                ];
+
+                // Get a random affirmation or daily one based on date
+                function getTodaysAffirmation() {
+                    const today = new Date();
+                    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+                    const index = dayOfYear % affirmations.length;
+                    return affirmations[index];
+                }
+
+                // Affirmation modal functions
+                function showAffirmationModal() {
+                    const modal = document.getElementById('affirmationModal');
+                    const affirmationElement = document.getElementById('todaysAffirmation');
+                    
+                    // Set today's affirmation
+                    affirmationElement.textContent = getTodaysAffirmation();
+                    
+                    // Show modal
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeAffirmationModal() {
+                    const modal = document.getElementById('affirmationModal');
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+
+                // Share modal functions
+                let currentShareText = "";
+                let currentShareType = "";
+
+                function openShareModal(text, type) {
+                    const modal = document.getElementById('shareModal');
+                    const linkInput = document.getElementById('shareLink');
+                    
+                    currentShareText = text;
+                    currentShareType = type;
+                    
+                    // Generate shareable link with content as parameter
+                    const baseUrl = window.location.origin + window.location.pathname;
+                    const shareUrl = `${baseUrl}?share=${encodeURIComponent(text)}`;
+                    
+                    linkInput.value = shareUrl;
+                    
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeShareModal() {
+                    const modal = document.getElementById('shareModal');
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+
+                function shareContent(platform) {
+                    const text = currentShareText;
+                    const url = window.location.href;
+                    
+                    // Default message template
+                    let shareText = `"${text}" - Shared from Rosemary Nzembi's Inspiration`;
+                    
+                    // Handle sharing based on platform
+                    switch(platform) {
+                        case 'facebook':
+                            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(shareText)}`, '_blank');
+                            break;
+                        case 'twitter':
+                            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank');
+                            break;
+                        case 'whatsapp':
+                            window.open(`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + url)}`, '_blank');
+                            break;
+                        case 'email':
+                            window.open(`mailto:?subject=Daily Inspiration from Rosemary Nzembi&body=${encodeURIComponent(shareText + '\n\n' + url)}`, '_blank');
+                            break;
+                    }
+                    
+                    // Close the share modal after sharing
+                    setTimeout(closeShareModal, 500);
+                }
+
+                // Save function for quotes and affirmations
+                function saveToLocalStorage(type, text) {
+                    // Get existing saved items or initialize empty array
+                    const saved = JSON.parse(localStorage.getItem(`saved_${type}s`) || '[]');
+                    
+                    // Check if already saved to prevent duplicates
+                    if (!saved.includes(text)) {
+                        saved.push(text);
+                        localStorage.setItem(`saved_${type}s`, JSON.stringify(saved));
+                        
+                        // Show success feedback
+                        showSaveConfirmation(type);
+                    } else {
+                        alert(`This ${type} is already in your favorites!`);
+                    }
+                }
+
+                function saveQuoteToFavorites() {
+                    const quoteText = document.getElementById('quoteText').textContent.trim();
+                    saveToLocalStorage('quote', quoteText);
+                }
+
+                function saveAffirmationToFavorites() {
+                    const affirmationText = document.getElementById('todaysAffirmation').textContent.trim();
+                    saveToLocalStorage('affirmation', affirmationText);
+                }
+
+                function showSaveConfirmation(type) {
+                    // Create and show a temporary notification
+                    const notification = document.createElement('div');
+                    notification.className = 'fixed bottom-4 right-4 bg-african-gold text-white px-6 py-3 rounded-lg shadow-lg z-[10001] flex items-center';
+                    notification.innerHTML = `<i class="fas fa-check-circle mr-2"></i> ${type.charAt(0).toUpperCase() + type.slice(1)} saved to favorites!`;
+                    
+                    document.body.appendChild(notification);
+                    
+                    // Remove after 3 seconds
+                    setTimeout(() => {
+                        notification.style.opacity = '0';
+                        notification.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            document.body.removeChild(notification);
+                        }, 500);
+                    }, 3000);
+                }
+
+                // Copy link function
+                function copyShareLink() {
+                    const linkInput = document.getElementById('shareLink');
+                    linkInput.select();
+                    document.execCommand('copy');
+                    
+                    // Show copy confirmation
+                    const copyBtn = document.getElementById('copyLink');
+                    const originalInnerHTML = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalInnerHTML;
+                    }, 2000);
+                }
+
+                // Initialize event listeners when DOM is loaded
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Daily affirmation button
+                    document.getElementById('showDailyAffirmation').addEventListener('click', showAffirmationModal);
+                    
+                    // Share quote button
+                    document.getElementById('shareQuote').addEventListener('click', function() {
+                        const quoteText = document.getElementById('quoteText').textContent.trim();
+                        openShareModal(quoteText, 'quote');
+                    });
+                    
+                    // Share affirmation button
+                    document.getElementById('shareAffirmation').addEventListener('click', function() {
+                        const affirmationText = document.getElementById('todaysAffirmation').textContent.trim();
+                        openShareModal(affirmationText, 'affirmation');
+                    });
+                    
+                    // Save quote button
+                    document.getElementById('saveQuote').addEventListener('click', saveQuoteToFavorites);
+                    
+                    // Copy link button
+                    document.getElementById('copyLink').addEventListener('click', copyShareLink);
+                    
+                    // Close modals when clicking outside
+                    document.getElementById('affirmationModal').addEventListener('click', function(e) {
+                        if (e.target === this) {
+                            closeAffirmationModal();
+                        }
+                    });
+                    
+                    document.getElementById('shareModal').addEventListener('click', function(e) {
+                        if (e.target === this) {
+                            closeShareModal();
+                        }
+                    });
+                    
+                    // Close modals with Escape key
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape') {
+                            closeAffirmationModal();
+                            closeShareModal();
+                        }
+                    });
+                    
+                    // Check URL for shared content
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const sharedContent = urlParams.get('share');
+                    if (sharedContent) {
+                        const quoteText = document.getElementById('quoteText');
+                        quoteText.textContent = decodeURIComponent(sharedContent);
+                    }
+                });
                     document.addEventListener('DOMContentLoaded', function() {
                         const openButton = document.getElementById('open-success-story');
                         const closeButton = document.getElementById('close-modal');
