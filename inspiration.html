@@ -105,7 +105,7 @@
                     </div>
                     <div class="block">
                         <h1 class="heading-font text-base sm:text-lg md:text-xl font-semibold text-white">Rosemary Nzembi, CPC</h1>
-                        <p class="text-xs text-african-gold -mt-1">Inspiring Lives Through Story</p>
+                        <p class="text-xs text-african-gold -mt-1">Transforming Lives through stories</p>
                     </div>
                 </div>
                 
@@ -179,9 +179,14 @@
                 <p class="text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-2">
                     Discover authentic wisdom through empowering stories, coaching sessions, and daily motivations to transform your mindset and elevate your lifes experience.
                 </p>
-             <h1 class="heading-font text-1xl md:text-1xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-2 lg:mb-3 leading-tight">
+                <h1 class="heading-font text-1xl md:text-1xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-2 lg:mb-3 leading-tight">
                     Have you considered <span class="inspiration-gradient text-transparent bg-clip-text">Professional Coaching?</span>
                 </h1>
+                <div class="mt-6">
+                    <button id="whyCoachingBtn" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                        Why Coaching?
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -575,6 +580,61 @@
         </div>
     </footer>
 
+    <!-- Why Coaching Modal -->
+    <div id="whyCoachingModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-african-gold to-deep-amber p-6 rounded-t-2xl">
+                <div class="flex items-center justify-between">
+                    <h2 class="heading-font text-2xl md:text-3xl font-bold text-white">Why Coaching?</h2>
+                    <button id="closeModalBtn" class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-all">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p-6 md:p-8">
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Everyday before we get into our cars or leave our homes, we already have a destination in mind. We know where we're going or want to go. At least I hope that's the case for you. We follow a specific or familiar route to get us to our final destination. If it's a new place, we might need some help. We could use a GPS, printed map or Google Maps, to show us the way. We could also ask someone for directions, especially if they've been there before.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        <strong class="text-african-gold">Bottom line is, we need directions in life!</strong> Just imagine walking or driving around without directions, getting into the wrong bus or not even knowing the cost of travel, to where we're going! You'd end up wandering off, wasting your time, energy and resources, and eventually very frustrated.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        It's the same way with our lives. If we go through life without a sense of identity, direction or purpose, we could end up wasting our God given gifts, precious youthful energy; leading to a very empty life. Just like driving or travel directions, we all need some key pointers if we're going to live a meaningful, fulfilled life.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        <strong class="text-african-gold">That is where professional life coaching comes in.</strong> It is very instrumental in helping us map out our lives, with periodic check points along the way.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        Contact us today, for a free telephone/online assessment, to determine your coaching needs. You have nothing to lose and it could save you a lot of energy and unnecessary headaches.
+                    </p>
+                    
+                    <div class="bg-gradient-to-br from-african-gold/10 to-sage-green/10 p-6 rounded-xl">
+                        <div class="text-center">
+                            <h3 class="heading-font text-xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+                            <p class="text-gray-600 mb-6">Schedule your free consultation today and discover how coaching can transform your life.</p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="coaching.html#contact" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 mobile-touch">
+                                    Book Free Consultation
+                                </a>
+                                <a href="mailto:info@rosemarynzembi.com" class="border-2 border-african-gold text-african-gold hover:bg-african-gold hover:text-white font-semibold py-3 px-6 rounded-full transition-all mobile-touch">
+                                    Email Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-btn');
@@ -582,6 +642,34 @@
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Why Coaching Modal
+        const whyCoachingBtn = document.getElementById('whyCoachingBtn');
+        const whyCoachingModal = document.getElementById('whyCoachingModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        // Open modal
+        whyCoachingBtn.addEventListener('click', () => {
+            whyCoachingModal.classList.remove('hidden');
+            whyCoachingModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close modal
+        closeModalBtn.addEventListener('click', () => {
+            whyCoachingModal.classList.add('hidden');
+            whyCoachingModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        whyCoachingModal.addEventListener('click', (e) => {
+            if (e.target === whyCoachingModal) {
+                whyCoachingModal.classList.add('hidden');
+                whyCoachingModal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
         });
 
         // Newsletter signup
