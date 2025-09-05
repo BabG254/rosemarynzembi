@@ -343,34 +343,40 @@
             </div>
 
             <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-                <form class="space-y-6">
+                <form action="https://formsubmit.co/kandidxpressions@gmail.com" method="POST" class="space-y-6" id="contact-form-element">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission from Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://rosemarynzembi.com/contact.html?success=true">
+                    
                     <!-- Personal Information -->
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name *</label>
-                            <input type="text" id="first-name" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your first name">
+                            <input type="text" id="first-name" name="first_name" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your first name">
                         </div>
                         <div>
                             <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name *</label>
-                            <input type="text" id="last-name" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your last name">
+                            <input type="text" id="last-name" name="last_name" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your last name">
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
-                            <input type="email" id="email" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="your.email@example.com">
+                            <input type="email" id="email" name="email" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="your.email@example.com">
                         </div>
                         <div>
                             <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-                            <input type="tel" id="phone" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="+254 700 000 000">
+                            <input type="tel" id="phone" name="phone" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="+254 700 000 000">
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label for="country" class="block text-gray-700 font-medium mb-2">Country/Region</label>
-                            <select id="country" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                            <select id="country" name="country" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
                                 <option value="">Select your country</option>
                                 <option value="kenya">Kenya</option>
                                 <option value="uganda">Uganda</option>
@@ -389,7 +395,7 @@
                         </div>
                         <div>
                             <label for="inquiry-type" class="block text-gray-700 font-medium mb-2">Type of Inquiry *</label>
-                            <select id="inquiry-type" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                            <select id="inquiry-type" name="inquiry_type" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
                                 <option value="">Select inquiry type</option>
                                 <option value="coaching">Personal Coaching</option>
                                 <option value="group-coaching">Group Coaching Program</option>
@@ -409,11 +415,11 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label for="organization" class="block text-gray-700 font-medium mb-2">Organization/Company</label>
-                            <input type="text" id="organization" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your organization name">
+                            <input type="text" id="organization" name="organization" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your organization name">
                         </div>
                         <div>
                             <label for="role" class="block text-gray-700 font-medium mb-2">Your Role/Title</label>
-                            <input type="text" id="role" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your job title or role">
+                            <input type="text" id="role" name="role" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch" placeholder="Your job title or role">
                         </div>
                     </div>
 
@@ -421,11 +427,11 @@
                     <div id="event-details" class="grid md:grid-cols-2 gap-6 hidden">
                         <div>
                             <label for="event-date" class="block text-gray-700 font-medium mb-2">Event/Project Date</label>
-                            <input type="date" id="event-date" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                            <input type="date" id="event-date" name="event_date" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
                         </div>
                         <div>
                             <label for="audience-size" class="block text-gray-700 font-medium mb-2">Expected Audience Size</label>
-                            <select id="audience-size" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                            <select id="audience-size" name="audience_size" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
                                 <option value="">Select audience size</option>
                                 <option value="1-10">1-10 people</option>
                                 <option value="11-50">11-50 people</option>
@@ -440,7 +446,7 @@
                     <!-- Budget Range (conditional) -->
                     <div id="budget-section" class="hidden">
                         <label for="budget" class="block text-gray-700 font-medium mb-2">Budget Range (Optional)</label>
-                        <select id="budget" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
+                        <select id="budget" name="budget" class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch">
                             <option value="">Prefer not to say</option>
                             <option value="under-500">Under $500</option>
                             <option value="500-1000">$500 - $1,000</option>
@@ -454,7 +460,7 @@
                     <!-- Message -->
                     <div>
                         <label for="message" class="block text-gray-700 font-medium mb-2">Your Message *</label>
-                        <textarea id="message" rows="6" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch resize-none" placeholder="Tell me about your goals, your event, or how I can help you. The more details you provide, the better I can understand your needs and respond effectively."></textarea>
+                        <textarea id="message" name="message" rows="6" required class="form-input w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-african-gold focus:border-transparent mobile-touch resize-none" placeholder="Tell me about your goals, your event, or how I can help you. The more details you provide, the better I can understand your needs and respond effectively."></textarea>
                         <div class="flex justify-between items-center mt-2">
                             <span class="text-sm text-gray-500">Please be as specific as possible</span>
                             <span id="char-count" class="text-sm text-gray-400">0/1000</span>
@@ -495,13 +501,29 @@
 
                     <!-- Submit Button -->
                     <div class="text-center">
-                        <button type="submit" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-12 rounded-full text-lg transition-all transform hover:scale-105 mobile-touch">
-                            Send Message
+                        <button type="submit" id="submit-btn" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-12 rounded-full text-lg transition-all transform hover:scale-105 mobile-touch">
+                            <span id="btn-text">Send Message</span>
+                            <span id="btn-loading" class="hidden">
+                                <i class="fas fa-spinner fa-spin mr-2"></i>Sending...
+                            </span>
                         </button>
                         <p class="text-sm text-gray-500 mt-4">
                             <i class="fas fa-shield-alt text-african-gold mr-1"></i>
                             Your information is secure and will never be shared with third parties.
                         </p>
+                    </div>
+
+                    <!-- Success/Error Messages -->
+                    <div id="success-message" class="hidden bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                        <i class="fas fa-check-circle text-green-500 text-xl mb-2"></i>
+                        <h3 class="text-green-800 font-semibold mb-1">Message Sent Successfully!</h3>
+                        <p class="text-green-700">Thank you for your message! I will personally review it and respond within 48 hours.</p>
+                    </div>
+
+                    <div id="error-message" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 text-center">
+                        <i class="fas fa-exclamation-circle text-red-500 text-xl mb-2"></i>
+                        <h3 class="text-red-800 font-semibold mb-1">Oops! Something went wrong.</h3>
+                        <p class="text-red-700">Please try again or contact me directly via email or WhatsApp.</p>
                     </div>
                 </form>
             </div>
@@ -689,6 +711,24 @@
     </footer>
 
     <script>
+        // Check for success parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            // Show success message
+            document.addEventListener('DOMContentLoaded', function() {
+                const successMessage = document.getElementById('success-message');
+                if (successMessage) {
+                    successMessage.classList.remove('hidden');
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Remove the success parameter from URL
+                    const url = new URL(window.location);
+                    url.searchParams.delete('success');
+                    window.history.replaceState({}, document.title, url);
+                }
+            });
+        }
+
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -736,8 +776,17 @@
         });
 
         // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        const form = document.getElementById('contact-form-element');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnLoading = document.getElementById('btn-loading');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', function(e) {
+            // Hide previous messages
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
             
             // Basic validation
             const requiredFields = ['first-name', 'last-name', 'email', 'inquiry-type', 'message'];
@@ -761,21 +810,20 @@
                 isValid = false;
             }
             
-            if (isValid) {
-                // Show success message
-                alert('Thank you for your message! I will personally review it and respond within 48 hours. Check your email for a confirmation.');
-                
-                // In production, this would submit to a backend service
-                console.log('Form would be submitted to backend service');
-                
-                // Reset form
-                this.reset();
-                eventDetails.classList.add('hidden');
-                budgetSection.classList.add('hidden');
-                charCount.textContent = '0/1000';
-            } else {
-                alert('Please fill in all required fields and provide a valid email address.');
+            if (!isValid) {
+                e.preventDefault();
+                errorMessage.querySelector('p').textContent = 'Please fill in all required fields and provide a valid email address.';
+                errorMessage.classList.remove('hidden');
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
             }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            
+            // Form will submit normally to FormSubmit
         });
 
         // Smooth scroll for anchor links
