@@ -343,13 +343,7 @@
             </div>
 
             <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-                <form action="https://formsubmit.co/kandidxpressions@gmail.com" method="POST" class="space-y-6" id="contact-form-element">
-                    <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_subject" value="New Contact Form Submission from Website">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://rosemarynzembi.com/contact.html?success=true">
-                    
+                <form class="space-y-6" id="contact-form-element">                    
                     <!-- Personal Information -->
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
@@ -652,7 +646,7 @@
                         <span class="heading-font text-2xl font-bold">Rosemary Nzembi,cpc</span>
                     </div>
                     <p class="text-gray-300 max-w-md mb-6">
-                        As Sub-Saharan Africa's  rising voice of hope, Rosemary is committed to transforming lives globally through tangible, relatable and realistic platforms. These include but are not limited to; Professional Coaching, Philanthropic Services & Inspirational Stories from all over the world. Because authentic stories have the power to bridge cultural, religious and other social gaps.
+                        Rosemary is a Kenyan American, with a diverse perspective on life, culture and religion. Harnessing her global perspective, she embraces diversity & inclusion; therefore injecting hope and freedom, into the lives of her clients and listeners. She is committed to inspiring hope through Professional Coaching, Inspirational stories & Philanthropy; to alleviate human suffering. Rosemary believes that we are all interconnected. And that real life stories have the power to bridge cultural, religious and other social gaps that may separate us. Stay connected and tap into this raw wisdom.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://youtu.be/ATZM-QHdHlg?si=JO8vCdqF6dA8b8W8" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-african-gold/20 rounded-full flex items-center justify-center text-white hover:text-african-gold transition-all mobile-touch">
@@ -783,7 +777,9 @@
         const successMessage = document.getElementById('success-message');
         const errorMessage = document.getElementById('error-message');
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
             // Hide previous messages
             successMessage.classList.add('hidden');
             errorMessage.classList.add('hidden');
@@ -811,7 +807,6 @@
             }
             
             if (!isValid) {
-                e.preventDefault();
                 errorMessage.querySelector('p').textContent = 'Please fill in all required fields and provide a valid email address.';
                 errorMessage.classList.remove('hidden');
                 errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -822,8 +817,62 @@
             submitBtn.disabled = true;
             btnText.classList.add('hidden');
             btnLoading.classList.remove('hidden');
-            
-            // Form will submit normally to FormSubmit
+
+            try {
+                // Collect form data
+                const formData = {
+                    first_name: document.getElementById('first-name').value,
+                    last_name: document.getElementById('last-name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    country: document.getElementById('country').value,
+                    inquiry_type: document.getElementById('inquiry-type').value,
+                    organization: document.getElementById('organization').value,
+                    role: document.getElementById('role').value,
+                    event_date: document.getElementById('event-date').value,
+                    audience_size: document.getElementById('audience-size').value,
+                    budget: document.getElementById('budget').value,
+                    message: document.getElementById('message').value
+                };
+
+                // Submit to Vercel serverless function
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // Show success message
+                    successMessage.querySelector('p').textContent = result.message;
+                    successMessage.classList.remove('hidden');
+                    
+                    // Reset form
+                    form.reset();
+                    eventDetails.classList.add('hidden');
+                    budgetSection.classList.add('hidden');
+                    charCount.textContent = '0/1000';
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error(result.message || 'Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.querySelector('p').textContent = error.message || 'Something went wrong. Please try again or contact us directly via email.';
+                errorMessage.classList.remove('hidden');
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
         });
 
         // Smooth scroll for anchor links

@@ -1,0 +1,16 @@
+{
+  "name": "rosemarynzembi-website",
+  "version": "1.0.0",
+  "description": "Rosemary Nzembi's official website with contact functionality",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build required for static site'"
+  },
+  "dependencies": {
+    "resend": "^2.1.0"
+  },
+  "keywords": ["coaching", "inspiration", "website"],
+  "author": "Rosemary Nzembi",
+  "license": "MIT"
+}
