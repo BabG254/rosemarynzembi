@@ -8,9 +8,7 @@
     "build": "echo 'Static site - no build required'",
     "start": "echo 'Static site served by Vercel'"
   },
-  "dependencies": {
-    "resend": "^2.1.0"
-  },
+  "dependencies": {},
   "keywords": ["coaching", "inspiration", "website"],
   "author": "Rosemary Nzembi",
   "license": "MIT",
