@@ -22,5 +22,8 @@
         }
       ]
     }
-  ]
+  ],
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": ".",
+  "installCommand": "npm install"
 }

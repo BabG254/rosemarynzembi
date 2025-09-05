@@ -5,12 +5,14 @@
   "main": "index.html",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'No build required for static site'"
+    "build": "echo 'Static site - no build required'",
+    "start": "echo 'Static site served by Vercel'"
   },
   "dependencies": {
     "resend": "^2.1.0"
   },
   "keywords": ["coaching", "inspiration", "website"],
   "author": "Rosemary Nzembi",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }
