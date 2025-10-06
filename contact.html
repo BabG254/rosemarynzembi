@@ -493,10 +493,46 @@
                         </label>
                     </div>
 
+                    <!-- Submission Method Choice -->
+                    <div class="bg-african-gold/5 rounded-lg p-6 border border-african-gold/20">
+                        <label class="block text-gray-700 font-medium mb-4">
+                            <i class="fas fa-paper-plane text-african-gold mr-2"></i>
+                            How would you like to send this message? *
+                        </label>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-african-gold transition-colors">
+                                <input type="radio" name="submission-method" value="email" checked class="mr-3 text-african-gold focus:ring-african-gold">
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-african-gold mr-3 text-lg"></i>
+                                    <div>
+                                        <span class="text-gray-800 font-semibold">Send via Email</span>
+                                        <p class="text-sm text-gray-600">To kandidxpressions@gmail.com</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-green-500 transition-colors">
+                                <input type="radio" name="submission-method" value="whatsapp" class="mr-3 text-green-500 focus:ring-green-500">
+                                <div class="flex items-center">
+                                    <i class="fab fa-whatsapp text-green-500 mr-3 text-lg"></i>
+                                    <div>
+                                        <span class="text-gray-800 font-semibold">Send via WhatsApp</span>
+                                        <p class="text-sm text-gray-600">To +254 722 689 014</p>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-3">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            Choose your preferred method. WhatsApp will format your message and open the app for immediate sending.
+                        </p>
+                    </div>
+
                     <!-- Submit Button -->
                     <div class="text-center">
                         <button type="submit" id="submit-btn" class="bg-african-gold hover:bg-deep-amber text-white font-semibold py-4 px-12 rounded-full text-lg transition-all transform hover:scale-105 mobile-touch">
-                            <span id="btn-text">Send Message</span>
+                            <span id="btn-text">
+                                <i class="fas fa-envelope mr-2"></i>Send via Email
+                            </span>
                             <span id="btn-loading" class="hidden">
                                 <i class="fas fa-spinner fa-spin mr-2"></i>Sending...
                             </span>
@@ -772,6 +808,26 @@
             }
         });
 
+        // Submission method choice handler
+        const submissionRadios = document.querySelectorAll('input[name="submission-method"]');
+        
+        submissionRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                const btnText = document.getElementById('btn-text');
+                const submitBtn = document.getElementById('submit-btn');
+                
+                if (this.value === 'whatsapp') {
+                    btnText.innerHTML = '<i class="fab fa-whatsapp mr-2"></i>Send via WhatsApp';
+                    submitBtn.classList.remove('bg-african-gold', 'hover:bg-deep-amber');
+                    submitBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+                } else {
+                    btnText.innerHTML = '<i class="fas fa-envelope mr-2"></i>Send via Email';
+                    submitBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    submitBtn.classList.add('bg-african-gold', 'hover:bg-deep-amber');
+                }
+            });
+        });
+
         // Form submission
         const form = document.getElementById('contact-form-element');
         const submitBtn = document.getElementById('submit-btn');
@@ -816,58 +872,176 @@
                 return;
             }
 
+            // Get submission method
+            const submissionMethod = document.querySelector('input[name="submission-method"]:checked').value;
+            
+            // Collect form data
+            const formData = {
+                first_name: document.getElementById('first-name').value,
+                last_name: document.getElementById('last-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                country: document.getElementById('country').value,
+                inquiry_type: document.getElementById('inquiry-type').value,
+                organization: document.getElementById('organization').value,
+                role: document.getElementById('role').value,
+                event_date: document.getElementById('event-date').value,
+                audience_size: document.getElementById('audience-size').value,
+                budget: document.getElementById('budget').value,
+                message: document.getElementById('message').value,
+                newsletter: document.querySelector('input[name="newsletter"]:checked') ? 'yes' : 'no'
+            };
+
+            if (submissionMethod === 'whatsapp') {
+                // Handle WhatsApp submission
+                handleWhatsAppSubmission(formData);
+            } else {
+                // Handle email submission
+                await handleEmailSubmission(formData);
+            }
+        });
+
+        function handleWhatsAppSubmission(formData) {
+            // Format message for WhatsApp
+            let whatsappMessage = `*New Contact Form Submission*\n\n`;
+            whatsappMessage += `*Name:* ${formData.first_name} ${formData.last_name}\n`;
+            whatsappMessage += `*Email:* ${formData.email}\n`;
+            
+            if (formData.phone) {
+                whatsappMessage += `*Phone:* ${formData.phone}\n`;
+            }
+            
+            if (formData.country) {
+                whatsappMessage += `*Country:* ${formData.country}\n`;
+            }
+            
+            whatsappMessage += `*Inquiry Type:* ${formData.inquiry_type}\n`;
+            
+            if (formData.organization) {
+                whatsappMessage += `*Organization:* ${formData.organization}\n`;
+            }
+            
+            if (formData.role) {
+                whatsappMessage += `*Role:* ${formData.role}\n`;
+            }
+            
+            if (formData.event_date) {
+                whatsappMessage += `*Event Date:* ${formData.event_date}\n`;
+            }
+            
+            if (formData.audience_size) {
+                whatsappMessage += `*Audience Size:* ${formData.audience_size}\n`;
+            }
+            
+            if (formData.budget && formData.budget !== '') {
+                whatsappMessage += `*Budget:* ${formData.budget}\n`;
+            }
+            
+            whatsappMessage += `\n*Message:*\n${formData.message}`;
+            
+            if (formData.newsletter === 'yes') {
+                whatsappMessage += `\n\n*Newsletter:* Yes, please subscribe me`;
+            }
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappURL = `https://wa.me/254722689014?text=${encodedMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Show success message
+            successMessage.querySelector('h3').textContent = 'WhatsApp Opened Successfully!';
+            successMessage.querySelector('p').textContent = 'Your message has been formatted and WhatsApp should now be open. Please review and send the message when ready.';
+            successMessage.classList.remove('hidden');
+            
+            // Reset form
+            form.reset();
+            eventDetails.classList.add('hidden');
+            budgetSection.classList.add('hidden');
+            charCount.textContent = '0/1000';
+            
+            // Reset button style
+            btnText.innerHTML = '<i class="fas fa-envelope mr-2"></i>Send via Email';
+            submitBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+            submitBtn.classList.add('bg-african-gold', 'hover:bg-deep-amber');
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        async function handleEmailSubmission(formData) {
             // Show loading state
             submitBtn.disabled = true;
             btnText.classList.add('hidden');
             btnLoading.classList.remove('hidden');
 
             try {
-                // Collect form data
-                const formData = {
-                    first_name: document.getElementById('first-name').value,
-                    last_name: document.getElementById('last-name').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    country: document.getElementById('country').value,
-                    inquiry_type: document.getElementById('inquiry-type').value,
-                    organization: document.getElementById('organization').value,
-                    role: document.getElementById('role').value,
-                    event_date: document.getElementById('event-date').value,
-                    audience_size: document.getElementById('audience-size').value,
-                    budget: document.getElementById('budget').value,
-                    message: document.getElementById('message').value
-                };
-
-                // Submit to Vercel serverless function
-                const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const result = await response.json();
-
-                if (response.ok && result.success) {
-                    // Show success message
-                    successMessage.querySelector('p').textContent = result.message;
-                    successMessage.classList.remove('hidden');
-                    
-                    // Reset form
-                    form.reset();
-                    eventDetails.classList.add('hidden');
-                    budgetSection.classList.add('hidden');
-                    charCount.textContent = '0/1000';
-                    
-                    // Scroll to success message
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else {
-                    throw new Error(result.message || 'Form submission failed');
+                // Create mailto link
+                let emailSubject = `Contact Form: ${formData.inquiry_type} inquiry from ${formData.first_name} ${formData.last_name}`;
+                let emailBody = `New contact form submission:\n\n`;
+                emailBody += `Name: ${formData.first_name} ${formData.last_name}\n`;
+                emailBody += `Email: ${formData.email}\n`;
+                
+                if (formData.phone) {
+                    emailBody += `Phone: ${formData.phone}\n`;
                 }
+                
+                if (formData.country) {
+                    emailBody += `Country: ${formData.country}\n`;
+                }
+                
+                emailBody += `Inquiry Type: ${formData.inquiry_type}\n`;
+                
+                if (formData.organization) {
+                    emailBody += `Organization: ${formData.organization}\n`;
+                }
+                
+                if (formData.role) {
+                    emailBody += `Role: ${formData.role}\n`;
+                }
+                
+                if (formData.event_date) {
+                    emailBody += `Event Date: ${formData.event_date}\n`;
+                }
+                
+                if (formData.audience_size) {
+                    emailBody += `Audience Size: ${formData.audience_size}\n`;
+                }
+                
+                if (formData.budget && formData.budget !== '') {
+                    emailBody += `Budget: ${formData.budget}\n`;
+                }
+                
+                emailBody += `\nMessage:\n${formData.message}`;
+                
+                if (formData.newsletter === 'yes') {
+                    emailBody += `\n\nNewsletter: Yes, please subscribe me`;
+                }
+
+                // Create mailto link
+                const mailtoLink = `mailto:kandidxpressions@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                successMessage.querySelector('h3').textContent = 'Email Client Opened!';
+                successMessage.querySelector('p').textContent = 'Your email client should now be open with the message pre-filled. Please review and send when ready.';
+                successMessage.classList.remove('hidden');
+                
+                // Reset form
+                form.reset();
+                eventDetails.classList.add('hidden');
+                budgetSection.classList.add('hidden');
+                charCount.textContent = '0/1000';
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
             } catch (error) {
                 console.error('Error:', error);
-                errorMessage.querySelector('p').textContent = error.message || 'Something went wrong. Please try again or contact us directly via email.';
+                errorMessage.querySelector('p').textContent = 'Something went wrong opening your email client. Please try again or contact us directly.';
                 errorMessage.classList.remove('hidden');
                 errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } finally {
@@ -876,6 +1050,24 @@
                 btnText.classList.remove('hidden');
                 btnLoading.classList.add('hidden');
             }
+        }
+
+        // Update submit button based on selected submission method
+        document.querySelectorAll('input[name="submission-method"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const submitBtn = document.getElementById('submit-btn');
+                const btnText = submitBtn.querySelector('span');
+                
+                if (this.value === 'whatsapp') {
+                    btnText.innerHTML = '<i class="fab fa-whatsapp mr-2"></i>Send via WhatsApp';
+                    submitBtn.classList.remove('bg-african-gold', 'hover:bg-deep-amber');
+                    submitBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+                } else {
+                    btnText.innerHTML = '<i class="fas fa-envelope mr-2"></i>Send via Email';
+                    submitBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    submitBtn.classList.add('bg-african-gold', 'hover:bg-deep-amber');
+                }
+            });
         });
 
         // Smooth scroll for anchor links
